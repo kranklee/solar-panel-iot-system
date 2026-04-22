@@ -2,8 +2,6 @@
 
 A real-time IoT data pipeline that simulates, transmits, and visualizes solar panel power output using Python and MQTT protocol.
 
-Built as part of **COMP216 – Data Communication for IoT** at Centennial College.
-
 ---
 
 ## 🖥 Screenshots
