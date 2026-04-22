@@ -4,12 +4,6 @@ A real-time IoT data pipeline that simulates, transmits, and visualizes solar pa
 
 ---
 
-## 🖥 Screenshots
-
-> Publisher (left) · Subscriber Dashboard (center) · Alert Monitor (right)
-
----
-
 ## 🔧 Tech Stack
 
 | Layer | Technology |
