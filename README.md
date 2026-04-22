@@ -67,7 +67,7 @@ solar-panel-iot-system/
 - Live power output chart drawn with **Tkinter Canvas** (no matplotlib)
 - Missing packet detection via ID gap analysis
 - Out-of-range and corrupt value rejection
-- Watchdog timer — alerts if no data received for 5+ seconds
+- Watchdog timer alerts if no data received for 5+ seconds
 - Dark / Light mode toggle
 
 ### Alert Monitor
@@ -130,5 +130,4 @@ python cembesli_publisher.py
 ## 👤 Author
 
 **Cem Besli**
-Software Engineering Technology — Centennial College
-[cembesli.com](https://cembesli.com) · [cem@cembesli.com](mailto:cem@cembesli.com)
+
