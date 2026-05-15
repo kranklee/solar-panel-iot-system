@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "title": "Cem Besli. Software Ingenieur und Systembauer",
+    "description": "Ein produktionsreifes interaktives Portfolio mit Live Engineering Arbeit von Cem Besli."
+  },
+  "nav": {
+    "projects": "Projekte",
+    "stack": "Stack",
+    "games": "Spiele",
+    "contact": "Kontakt",
+    "theme": "Theme wechseln",
+    "language": "Sprache"
+  },
+  "hero": {
+    "name": "Cem Besli",
+    "role": "Software Ingenieur",
+    "subrole": "Systembauer und Full Stack Entwickler",
+    "location": "Ottawa, Ontario, Kanada",
+    "tagline": "Ich baue interaktive, performante und widerstandsfaehige Software ueber den gesamten Stack.",
+    "viewProjects": "Projekte ansehen",
+    "contact": "Kontakt aufnehmen",
+    "openCV": "Lebenslauf oeffnen"
+  },
+  "github": {
+    "title": "Live von GitHub",
+    "subtitle": "Echtzeit Ansicht aktueller Repositories",
+    "followers": "Follower",
+    "following": "folgt",
+    "stars": "Sterne",
+    "forks": "Forks",
+    "viewProfile": "Profil ansehen",
+    "loading": "Repositories werden geladen",
+    "error": "GitHub Daten konnten gerade nicht geladen werden."
+  },
+  "python": {
+    "title": "Python im Browser",
+    "subtitle": "Pyodide laeuft in einem Web Worker. Probieren Sie unten echtes Python aus.",
+    "run": "Ausfuehren",
+    "clear": "Loeschen",
+    "reset": "Beispiel zuruecksetzen",
+    "loading": "Pyodide Laufzeit wird geladen",
+    "ready": "Laufzeit bereit"
+  },
+  "games": {
+    "title": "Interaktive Spiele",
+    "subtitle": "Spielen Sie und reichen Sie Ihren Score in die globale Bestenliste ein.",
+    "starblast": "Starblast",
+    "ageofwar": "Age of War",
+    "dronesim": "Drohnen Simulator",
+    "leaderboard": "Bestenliste",
+    "yourName": "Ihr Name",
+    "submit": "Einreichen",
+    "play": "Spielen",
+    "pause": "Pause",
+    "restart": "Neustart",
+    "score": "Punkte",
+    "wave": "Welle",
+    "gold": "Gold",
+    "waypoint": "Wegpunkt",
+    "time": "Zeit",
+    "gameOver": "Spiel vorbei",
+    "youWin": "Sie gewinnen",
+    "youLose": "Sie verlieren",
+    "controls": "Steuerung",
+    "starblastControls": "Bewegung mit WASD oder Pfeiltasten. Leertaste zum Schiessen.",
+    "ageofwarControls": "Klicken Sie auf eine Einheit, um sie zu beschwoeren. Gold regeneriert sich mit der Zeit.",
+    "dronesimControls": "Bewegung mit WASD. Sammeln Sie Wegpunkte in der Reihenfolge.",
+    "spawnSoldier": "Soldat",
+    "spawnArcher": "Bogenschuetze",
+    "spawnTank": "Panzer",
+    "noScores": "Noch keine Scores. Seien Sie der erste."
+  },
+  "stack": {
+    "title": "Tech Stack",
+    "subtitle": "Werkzeuge mit denen ich liefere.",
+    "languages": "Sprachen",
+    "frameworks": "Frameworks",
+    "tools": "Werkzeuge",
+    "cloud": "Cloud"
+  },
+  "architecture": {
+    "title": "Architektur Fallstudie",
+    "subtitle": "Warum diese Entscheidungen und wie Daten durch das System fliessen.",
+    "frontend": "Frontend",
+    "frontendBody": "Next.js 14 App Router mit React Server Components, von Vercel Edge ausgeliefert fuer geringe Latenz in Ontario und weltweit.",
+    "api": "API Schicht",
+    "apiBody": "Route Handler mit ISR fuer gecachte GitHub Daten plus Serverless Functions fuer Supabase Schreibvorgaenge.",
+    "database": "Datenbank",
+    "databaseBody": "Supabase PostgreSQL mit Row Level Security und Realtime Abonnements treibt die globale Bestenliste an.",
+    "deployment": "Deployment",
+    "deploymentBody": "Vercel Edge Runtime mit GitHub Actions, die Type Check, Lint und Build bei jedem Push erzwingen."
+  },
+  "cv": {
+    "title": "Lebenslauf",
+    "download": "PDF herunterladen",
+    "close": "Schliessen",
+    "open": "Lebenslauf oeffnen"
+  },
+  "contact": {
+    "title": "Kontakt aufnehmen",
+    "subtitle": "Offen fuer Stellen in Ottawa, Ontario und weltweit remote.",
+    "email": "E Mail",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten.",
+    "built": "Gebaut mit Next.js, TypeScript, Tailwind und Supabase."
+  }
+}

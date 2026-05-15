@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "title": "Cem Besli. Ingenieur Logiciel et Architecte Systeme",
+    "description": "Un portfolio interactif de qualite production presentant le travail en ingenierie de Cem Besli."
+  },
+  "nav": {
+    "projects": "Projets",
+    "stack": "Outils",
+    "games": "Jeux",
+    "contact": "Contact",
+    "theme": "Changer le theme",
+    "language": "Langue"
+  },
+  "hero": {
+    "name": "Cem Besli",
+    "role": "Ingenieur Logiciel",
+    "subrole": "Architecte Systeme et Developpeur Full Stack",
+    "location": "Ottawa, Ontario, Canada",
+    "tagline": "Je concois des logiciels interactifs, performants et resilients sur toute la pile.",
+    "viewProjects": "Voir les Projets",
+    "contact": "Me Contacter",
+    "openCV": "Ouvrir le CV"
+  },
+  "github": {
+    "title": "En direct de GitHub",
+    "subtitle": "Vue en temps reel des depots recents",
+    "followers": "abonnes",
+    "following": "abonnements",
+    "stars": "etoiles",
+    "forks": "forks",
+    "viewProfile": "Voir le profil",
+    "loading": "Chargement des depots",
+    "error": "Impossible de charger les donnees GitHub pour le moment."
+  },
+  "python": {
+    "title": "Python dans le Navigateur",
+    "subtitle": "Pyodide s execute dans un Web Worker. Essayez du Python reel ci dessous.",
+    "run": "Executer",
+    "clear": "Effacer",
+    "reset": "Reinitialiser",
+    "loading": "Chargement du moteur Pyodide",
+    "ready": "Moteur pret"
+  },
+  "games": {
+    "title": "Jeux Interactifs",
+    "subtitle": "Jouez et soumettez votre score au classement global.",
+    "starblast": "Starblast",
+    "ageofwar": "Age of War",
+    "dronesim": "Simulateur de Drone",
+    "leaderboard": "Classement",
+    "yourName": "Votre nom",
+    "submit": "Soumettre",
+    "play": "Jouer",
+    "pause": "Pause",
+    "restart": "Recommencer",
+    "score": "Score",
+    "wave": "Vague",
+    "gold": "Or",
+    "waypoint": "Balise",
+    "time": "Temps",
+    "gameOver": "Partie terminee",
+    "youWin": "Vous gagnez",
+    "youLose": "Vous perdez",
+    "controls": "Commandes",
+    "starblastControls": "Deplacement avec WASD ou les fleches. Espace pour tirer.",
+    "ageofwarControls": "Cliquez un bouton pour invoquer une unite. L or se regenere avec le temps.",
+    "dronesimControls": "Deplacement avec WASD. Collectez les balises dans l ordre.",
+    "spawnSoldier": "Soldat",
+    "spawnArcher": "Archer",
+    "spawnTank": "Tank",
+    "noScores": "Aucun score pour l instant. Soyez le premier."
+  },
+  "stack": {
+    "title": "Pile Technique",
+    "subtitle": "Les outils que j utilise pour livrer.",
+    "languages": "Langages",
+    "frameworks": "Frameworks",
+    "tools": "Outils",
+    "cloud": "Cloud"
+  },
+  "architecture": {
+    "title": "Etude d Architecture",
+    "subtitle": "Pourquoi ces choix et comment les donnees circulent dans le systeme.",
+    "frontend": "Frontend",
+    "frontendBody": "Next.js 14 App Router avec React Server Components, diffuse depuis Vercel Edge pour une faible latence en Ontario et dans le monde.",
+    "api": "Couche API",
+    "apiBody": "Route handlers avec ISR pour mettre en cache GitHub, plus des fonctions serverless pour les ecritures Supabase.",
+    "database": "Base de Donnees",
+    "databaseBody": "Supabase PostgreSQL avec RLS et abonnements en temps reel alimente le classement global.",
+    "deployment": "Deploiement",
+    "deploymentBody": "Vercel Edge Runtime avec GitHub Actions imposant type check, lint et build a chaque push."
+  },
+  "cv": {
+    "title": "Curriculum Vitae",
+    "download": "Telecharger le PDF",
+    "close": "Fermer",
+    "open": "Ouvrir le CV"
+  },
+  "contact": {
+    "title": "Prenons Contact",
+    "subtitle": "Ouvert aux postes a Ottawa, Ontario et a distance dans le monde.",
+    "email": "Courriel",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "rights": "Tous droits reserves.",
+    "built": "Construit avec Next.js, TypeScript, Tailwind et Supabase."
+  }
+}
