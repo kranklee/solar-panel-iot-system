@@ -1,0 +1,43 @@
+# GitHub Actions workflow that lints, type checks, and builds the portfolio on every push and PR to main
+# Runs from the cembesli-portfolio working directory using Node 20 with the npm cache
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    name: Lint, type check, and build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: cembesli-portfolio
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: cembesli-portfolio/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Type check
+        run: npm run type-check
+
+      - name: Build
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: https://example.supabase.co
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: example-anon-key
+          NEXT_PUBLIC_SITE_URL: https://cembesli.com
+        run: npm run build

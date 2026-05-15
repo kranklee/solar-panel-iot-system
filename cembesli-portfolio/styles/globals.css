@@ -1,0 +1,81 @@
+/* Global stylesheet wiring Tailwind layers and base typography tokens */
+/* Defines CSS custom properties used by both light and dark themes */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 245 245 247;
+    --foreground: 11 15 26;
+    --card: 255 255 255;
+    --border: 229 231 235;
+  }
+
+  .dark {
+    --background: 11 15 26;
+    --foreground: 245 245 247;
+    --card: 17 24 39;
+    --border: 31 41 55;
+  }
+
+  * {
+    border-color: rgb(var(--border));
+  }
+
+  html,
+  body {
+    background-color: rgb(var(--background));
+    color: rgb(var(--foreground));
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-syne), system-ui, sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  code,
+  pre {
+    font-family: var(--font-dm-mono), ui-monospace, monospace;
+  }
+
+  ::selection {
+    background-color: #6366f1;
+    color: #ffffff;
+  }
+}
+
+@layer components {
+  .bento-card {
+    @apply relative overflow-hidden rounded-card border bg-card dark:bg-card-dark shadow-card transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lift;
+  }
+
+  .glass-pill {
+    @apply rounded-full border bg-white/60 dark:bg-black/40 backdrop-blur-xl backdrop-saturate-150;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-all hover:brightness-110 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border bg-transparent px-5 py-2.5 text-sm font-medium transition-all hover:bg-black/5 dark:hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: rgb(var(--border));
+    border-radius: 999px;
+  }
+}
