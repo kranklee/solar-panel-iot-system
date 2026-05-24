@@ -1,12 +1,12 @@
 // Locale aware home page composing the hero and bento grid of feature cards
 // Fully server rendered with translations resolved at request time
 import { useTranslations } from 'next-intl';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { BentoGrid } from '@/components/bento/BentoGrid';
 
 export default function LocaleHomePage({ params }: { params: { locale: string } }) {
-  unstable_setRequestLocale(params.locale);
+  setRequestLocale(params.locale);
   const t = useTranslations('hero');
   const tFooter = useTranslations('footer');
 

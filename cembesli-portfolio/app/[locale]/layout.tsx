@@ -3,7 +3,7 @@
 import type { Metadata } from 'next';
 import { Syne, DM_Sans, DM_Mono } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import type { ReactNode } from 'react';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
@@ -62,7 +62,7 @@ export default async function LocaleLayout({
   if (!locales.includes(params.locale as (typeof locales)[number])) {
     notFound();
   }
-  unstable_setRequestLocale(params.locale);
+  setRequestLocale(params.locale);
   const messages = await getMessages();
 
   return (
