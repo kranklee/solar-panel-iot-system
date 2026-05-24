@@ -1,5 +1,5 @@
 /* Global stylesheet wiring Tailwind layers and base typography tokens */
-/* Defines CSS custom properties used by both light and dark themes */
+/* Defines CSS custom properties used by both light and dark themes plus motion guards */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -48,6 +48,17 @@
   ::selection {
     background-color: #6366f1;
     color: #ffffff;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 

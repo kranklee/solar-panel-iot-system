@@ -4,6 +4,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { useAchievements } from '@/components/providers/AchievementsProvider';
 
 const FIBONACCI_EXAMPLE = `def fib(n):
     a, b = 0, 1
@@ -66,6 +67,7 @@ interface OutputLine {
 
 export function PythonRunner() {
   const t = useTranslations('python');
+  const { unlock } = useAchievements();
   const [code, setCode] = useState<string>(FIBONACCI_EXAMPLE);
   const [output, setOutput] = useState<OutputLine[]>([]);
   const [ready, setReady] = useState(false);
@@ -115,6 +117,7 @@ export function PythonRunner() {
   function run(): void {
     if (!ready || !workerRef.current) return;
     setRunning(true);
+    unlock('pythonista');
     workerRef.current.postMessage({ type: 'run', code, id: idRef.current++ });
   }
 

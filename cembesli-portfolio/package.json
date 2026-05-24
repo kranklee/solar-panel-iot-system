@@ -1,6 +1,6 @@
 {
   "name": "cembesli-portfolio",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "description": "Production-grade interactive portfolio for Cem Besli",
   "scripts": {
@@ -11,7 +11,10 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "0.32.1",
     "@supabase/supabase-js": "^2.45.4",
+    "@vercel/analytics": "^1.4.1",
+    "@vercel/speed-insights": "^1.1.0",
     "clsx": "^2.1.1",
     "next": "14.2.15",
     "next-intl": "3.26.5",

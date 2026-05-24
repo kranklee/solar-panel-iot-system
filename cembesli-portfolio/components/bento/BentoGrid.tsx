@@ -7,6 +7,11 @@ import { TechStackCard } from './TechStackCard';
 import { ArchitectureCard } from './ArchitectureCard';
 import { CVModal } from './CVModal';
 import { ContactCard } from './ContactCard';
+import { AIChatCard } from './AIChatCard';
+import { SolarDashboardCard } from './SolarDashboardCard';
+import { TechRadarCard } from './TechRadarCard';
+import { TimelineCard } from './TimelineCard';
+import { AchievementsCard } from './AchievementsCard';
 
 export function BentoGrid() {
   return (
@@ -21,6 +26,12 @@ export function BentoGrid() {
       <div className="col-span-1 row-span-2 sm:col-span-6 lg:col-span-5">
         <PythonRunner />
       </div>
+      <div className="col-span-1 row-span-3 sm:col-span-6 lg:col-span-7">
+        <AIChatCard />
+      </div>
+      <div className="col-span-1 row-span-3 sm:col-span-6 lg:col-span-5">
+        <SolarDashboardCard />
+      </div>
       <div id="games" className="col-span-1 row-span-4 sm:col-span-6 lg:col-span-8">
         <GamesCard />
       </div>
@@ -33,7 +44,16 @@ export function BentoGrid() {
       <div className="col-span-1 row-span-3 sm:col-span-6 lg:col-span-7">
         <ArchitectureCard />
       </div>
-      <div id="contact" className="col-span-1 row-span-3 sm:col-span-6 lg:col-span-5">
+      <div className="col-span-1 row-span-3 sm:col-span-6 lg:col-span-5">
+        <TechRadarCard />
+      </div>
+      <div className="col-span-1 row-span-3 sm:col-span-6 lg:col-span-5">
+        <TimelineCard />
+      </div>
+      <div className="col-span-1 row-span-3 sm:col-span-6 lg:col-span-4">
+        <AchievementsCard />
+      </div>
+      <div id="contact" className="col-span-1 row-span-3 sm:col-span-6 lg:col-span-3">
         <ContactCard />
       </div>
     </section>

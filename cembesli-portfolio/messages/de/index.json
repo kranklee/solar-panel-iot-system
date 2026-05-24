@@ -8,8 +8,16 @@
     "stack": "Stack",
     "games": "Spiele",
     "contact": "Kontakt",
+    "dashboard": "Dashboard",
+    "uses": "Setup",
+    "now": "Jetzt",
+    "changelog": "Verlauf",
     "theme": "Theme wechseln",
-    "language": "Sprache"
+    "language": "Sprache",
+    "menu": "Menue",
+    "close": "Schliessen",
+    "skipToContent": "Zum Hauptinhalt springen",
+    "commandPalette": "Befehlspalette oeffnen"
   },
   "hero": {
     "name": "Cem Besli",
@@ -19,7 +27,8 @@
     "tagline": "Ich baue interaktive, performante und widerstandsfaehige Software ueber den gesamten Stack.",
     "viewProjects": "Projekte ansehen",
     "contact": "Kontakt aufnehmen",
-    "openCV": "Lebenslauf oeffnen"
+    "openCV": "Lebenslauf oeffnen",
+    "bookCall": "Termin buchen"
   },
   "github": {
     "title": "Live von GitHub",
@@ -30,7 +39,8 @@
     "forks": "Forks",
     "viewProfile": "Profil ansehen",
     "loading": "Repositories werden geladen",
-    "error": "GitHub Daten konnten gerade nicht geladen werden."
+    "error": "GitHub Daten konnten gerade nicht geladen werden.",
+    "contributions": "Beitraege im letzten Jahr"
   },
   "python": {
     "title": "Python im Browser",
@@ -40,6 +50,18 @@
     "reset": "Beispiel zuruecksetzen",
     "loading": "Pyodide Laufzeit wird geladen",
     "ready": "Laufzeit bereit"
+  },
+  "ai": {
+    "title": "Frag mein Portfolio",
+    "subtitle": "Ein KI Assistent geschult mit meinem Lebenslauf. Stellen Sie eine Frage.",
+    "placeholder": "Woran hat Cem zuletzt gearbeitet?",
+    "send": "Senden",
+    "thinking": "Denkt nach",
+    "examples": "Probieren Sie zu fragen",
+    "ex1": "Woran arbeitet Cem gerade?",
+    "ex2": "Erzaehl mir vom Solarpanel IoT Projekt.",
+    "ex3": "Fuer welche Rollen ist Cem offen?",
+    "unavailable": "Chat ist offline. Setzen Sie ANTHROPIC_API_KEY zum Aktivieren."
   },
   "games": {
     "title": "Interaktive Spiele",
@@ -68,7 +90,11 @@
     "spawnSoldier": "Soldat",
     "spawnArcher": "Bogenschuetze",
     "spawnTank": "Panzer",
-    "noScores": "Noch keine Scores. Seien Sie der erste."
+    "noScores": "Noch keine Scores. Seien Sie der erste.",
+    "mute": "Ton aus",
+    "unmute": "Ton an",
+    "bestScore": "Bestwert",
+    "fire": "Feuer"
   },
   "stack": {
     "title": "Tech Stack",
@@ -77,6 +103,19 @@
     "frameworks": "Frameworks",
     "tools": "Werkzeuge",
     "cloud": "Cloud"
+  },
+  "radar": {
+    "title": "Tech Radar",
+    "subtitle": "Wo ich bei jedem Werkzeug stehe. Adopt, Trial, Assess oder Hold.",
+    "adopt": "Adopt",
+    "trial": "Trial",
+    "assess": "Assess",
+    "hold": "Hold"
+  },
+  "timeline": {
+    "title": "Weg und Erfahrung",
+    "subtitle": "Bildung und Berufserfahrung.",
+    "present": "Aktuell"
   },
   "architecture": {
     "title": "Architektur Fallstudie",
@@ -101,10 +140,89 @@
     "subtitle": "Offen fuer Stellen in Ottawa, Ontario und weltweit remote.",
     "email": "E Mail",
     "github": "GitHub",
-    "linkedin": "LinkedIn"
+    "linkedin": "LinkedIn",
+    "booking": "Gespraech buchen"
+  },
+  "achievements": {
+    "title": "Erfolge",
+    "unlock": "Freigeschaltet",
+    "explorer": "Entdecker",
+    "explorerDesc": "Das Portfolio besucht.",
+    "polyglot": "Polyglott",
+    "polyglotDesc": "Mehr als eine Sprache ausprobiert.",
+    "themeShifter": "Theme Wechsler",
+    "themeShifterDesc": "Das Theme umgeschaltet.",
+    "pythonista": "Pythonista",
+    "pythonistaDesc": "Python im Browser ausgefuehrt.",
+    "gamer": "Spieler",
+    "gamerDesc": "Ein Spiel bis Game Over gespielt.",
+    "conqueror": "Eroberer",
+    "conquerorDesc": "Alle drei Spiele gespielt.",
+    "curious": "Neugierig",
+    "curiousDesc": "Die Befehlspalette geoeffnet.",
+    "secret": "Geheimagent",
+    "secretDesc": "Den versteckten Code gefunden."
+  },
+  "cmdk": {
+    "placeholder": "Befehl eingeben oder suchen",
+    "navigate": "Navigieren",
+    "actions": "Aktionen",
+    "external": "Extern"
+  },
+  "dashboard": {
+    "title": "Live Solarpanel Dashboard",
+    "subtitle": "Streamt simulierte Werte aus meinem Solarpanel IoT System. In Produktion via Supabase Realtime.",
+    "power": "Leistung",
+    "weather": "Wetter",
+    "peak": "Spitze heute",
+    "average": "Durchschnitt",
+    "panels": "Panels online",
+    "watts": "Watt",
+    "history": "Letzte sechzig Werte"
+  },
+  "uses": {
+    "title": "Mein Setup",
+    "subtitle": "Mein aktuelles Setup. Wird bei Aenderungen aktualisiert.",
+    "hardware": "Hardware",
+    "software": "Software",
+    "services": "Dienste",
+    "everyday": "Alltag"
+  },
+  "now": {
+    "title": "Woran ich gerade arbeite",
+    "subtitle": "Ein lebendes Dokument aktueller Schwerpunkte."
+  },
+  "changelog": {
+    "title": "Aenderungsverlauf",
+    "subtitle": "Oeffentliches Protokoll dessen was ich geliefert habe und wann."
+  },
+  "status": {
+    "title": "Systemstatus",
+    "subtitle": "Live Signale aus diesem Portfolio und meinen Diensten.",
+    "operational": "Betriebsbereit",
+    "degraded": "Eingeschraenkt",
+    "down": "Ausgefallen",
+    "uptime": "Verfuegbarkeit",
+    "responseTime": "Antwortzeit",
+    "lastDeploy": "Letztes Deploy",
+    "checkAgain": "Erneut pruefen"
+  },
+  "projects": {
+    "title": "Fallstudien",
+    "subtitle": "Ausgewaehlte Projekte mit Problem, Design und gelernten Lektionen.",
+    "problem": "Problem",
+    "design": "Design",
+    "stack": "Stack",
+    "lessons": "Gelernte Lektionen",
+    "back": "Zurueck zur Startseite",
+    "view": "Fallstudie lesen",
+    "viewCode": "Code ansehen"
   },
   "footer": {
     "rights": "Alle Rechte vorbehalten.",
-    "built": "Gebaut mit Next.js, TypeScript, Tailwind und Supabase."
+    "built": "Gebaut mit Next.js, TypeScript, Tailwind und Supabase.",
+    "status": "Status",
+    "uses": "Setup",
+    "now": "Jetzt"
   }
 }

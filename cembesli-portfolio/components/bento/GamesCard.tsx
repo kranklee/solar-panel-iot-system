@@ -2,18 +2,22 @@
 // Subscribes to Supabase realtime updates so new scores arrive without refresh
 'use client';
 
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { StarblastGame } from '@/components/games/StarblastGame';
 import { AgeOfWarGame } from '@/components/games/AgeOfWarGame';
 import { DroneSimGame } from '@/components/games/DroneSimGame';
 import { getBrowserSupabase, type GameKey, type ScoreRow } from '@/lib/supabase';
+import { useAchievements } from '@/components/providers/AchievementsProvider';
+import { isMuted, setMuted } from '@/lib/sound';
 import { cn } from '@/lib/utils';
 
 const GAMES: GameKey[] = ['starblast', 'ageofwar', 'dronesim'];
+const PLAYED_KEY = 'cembesli.gamesPlayed';
 
 export function GamesCard() {
   const t = useTranslations('games');
+  const { unlock } = useAchievements();
   const [active, setActive] = useState<GameKey>('starblast');
   const [scores, setScores] = useState<Record<GameKey, ScoreRow[]>>({
     starblast: [],
@@ -23,6 +27,21 @@ export function GamesCard() {
   const [playerName, setPlayerName] = useState('');
   const [pendingScore, setPendingScore] = useState<number | null>(null);
   const [supabaseAvailable, setSupabaseAvailable] = useState(true);
+  const [muted, setMutedLocal] = useState(false);
+  const playedRef = useRef<Set<GameKey>>(new Set());
+
+  useEffect(() => {
+    try {
+      const raw = window.localStorage.getItem(PLAYED_KEY);
+      if (raw) {
+        const parsed = JSON.parse(raw) as GameKey[];
+        parsed.forEach((entry) => playedRef.current.add(entry));
+        if (playedRef.current.size >= GAMES.length) unlock('conqueror');
+      }
+    } catch {
+      // ignore
+    }
+  }, [unlock]);
 
   const loadScores = useCallback(async (): Promise<void> => {
     try {
@@ -99,12 +118,36 @@ export function GamesCard() {
   const handleGameOver = useCallback(
     (score: number) => {
       setPendingScore(score);
+      playedRef.current.add(active);
+      try {
+        window.localStorage.setItem(
+          PLAYED_KEY,
+          JSON.stringify(Array.from(playedRef.current))
+        );
+      } catch {
+        // ignore
+      }
+      if (playedRef.current.size >= GAMES.length) {
+        unlock('conqueror');
+      }
       if (playerName.trim()) {
         void submitScore(active, score);
       }
     },
-    [active, playerName, submitScore]
+    [active, playerName, submitScore, unlock]
   );
+
+  const toggleMute = useCallback(() => {
+    setMutedLocal((prev) => {
+      const next = !prev;
+      setMuted(next);
+      return next;
+    });
+  }, []);
+
+  useEffect(() => {
+    setMutedLocal(isMuted());
+  }, []);
 
   const activeBoard = useMemo(() => scores[active], [scores, active]);
 
@@ -115,6 +158,14 @@ export function GamesCard() {
           <h2 className="text-xl font-semibold">{t('title')}</h2>
           <p className="mt-1 text-sm text-foreground/60 dark:text-bg/60">{t('subtitle')}</p>
         </div>
+        <button
+          type="button"
+          onClick={toggleMute}
+          aria-label={muted ? t('unmute') : t('mute')}
+          className="rounded-full border bg-card/40 px-3 py-1 text-xs dark:bg-card-dark/40"
+        >
+          {muted ? t('unmute') : t('mute')}
+        </button>
       </header>
 
       <div role="tablist" aria-label={t('title')} className="mt-4 flex flex-wrap gap-1.5">
@@ -144,7 +195,10 @@ export function GamesCard() {
           {active === 'dronesim' && <DroneSimGame onGameOver={handleGameOver} />}
         </div>
 
-        <aside aria-label={t('leaderboard')} className="flex flex-col rounded-2xl border bg-black/[0.02] p-3 dark:bg-white/[0.03]">
+        <aside
+          aria-label={t('leaderboard')}
+          className="flex flex-col rounded-2xl border bg-black/[0.02] p-3 dark:bg-white/[0.03]"
+        >
           <h3 className="text-sm font-semibold uppercase tracking-wide text-foreground/60 dark:text-bg/60">
             {t('leaderboard')}
           </h3>

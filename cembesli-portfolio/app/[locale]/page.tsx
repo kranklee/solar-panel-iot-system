@@ -1,14 +1,14 @@
-// Locale aware home page composing the hero and bento grid of feature cards
+// Locale aware home page composing the hero, bento grid, and contribution heatmap
 // Fully server rendered with translations resolved at request time
 import { useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { BentoGrid } from '@/components/bento/BentoGrid';
+import { ContributionHeatmap } from '@/components/bento/ContributionHeatmap';
 
 export default function LocaleHomePage({ params }: { params: { locale: string } }) {
   setRequestLocale(params.locale);
   const t = useTranslations('hero');
-  const tFooter = useTranslations('footer');
 
   return (
     <>
@@ -31,23 +31,23 @@ export default function LocaleHomePage({ params }: { params: { locale: string } 
           {t('tagline')}
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
-          <Link href="#projects" className="btn-primary" aria-label={t('viewProjects')}>
+          <Link href={`/${params.locale}/projects`} className="btn-primary" aria-label={t('viewProjects')}>
             {t('viewProjects')}
           </Link>
-          <Link href="#contact" className="btn-ghost" aria-label={t('contact')}>
+          <Link href={`/${params.locale}#contact`} className="btn-ghost" aria-label={t('contact')}>
             {t('contact')}
+          </Link>
+          <Link href={`/${params.locale}/dashboard`} className="btn-ghost">
+            Live dashboard
           </Link>
         </div>
       </section>
 
       <BentoGrid />
 
-      <footer className="mt-24 border-t pt-8 text-sm text-foreground/60 dark:text-bg/60">
-        <p>
-          &copy; {new Date().getFullYear()} Cem Besli. {tFooter('rights')}
-        </p>
-        <p className="mt-1">{tFooter('built')}</p>
-      </footer>
+      <section className="mt-8">
+        <ContributionHeatmap />
+      </section>
     </>
   );
 }

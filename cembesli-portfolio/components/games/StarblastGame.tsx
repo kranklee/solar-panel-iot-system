@@ -1,33 +1,37 @@
-// Canvas based Starblast clone with vector physics, screen wrap, and asteroid spawning
+// Canvas based Starblast clone with vector physics, sound effects, and touch controls
 // Reports the final score to the parent through onGameOver when the ship is destroyed
 'use client';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { TouchControls } from './TouchControls';
+import { blip, chord } from '@/lib/sound';
+import { useAchievements } from '@/components/providers/AchievementsProvider';
 
 interface StarblastGameProps {
   onGameOver: (score: number) => void;
 }
 
-interface Vec {
+interface Ship {
   x: number;
   y: number;
-}
-
-interface Ship extends Vec {
   vx: number;
   vy: number;
   angle: number;
   radius: number;
 }
 
-interface Bullet extends Vec {
+interface Bullet {
+  x: number;
+  y: number;
   vx: number;
   vy: number;
   life: number;
 }
 
-interface Asteroid extends Vec {
+interface Asteroid {
+  x: number;
+  y: number;
   vx: number;
   vy: number;
   radius: number;
@@ -41,6 +45,7 @@ const DRAG = 0.99;
 const BULLET_SPEED = 5;
 const BULLET_LIFE = 70;
 const ASTEROID_SPAWN_FRAMES = 90;
+const BEST_KEY = 'cembesli.best.starblast';
 
 function createShip(): Ship {
   return { x: WIDTH / 2, y: HEIGHT / 2, vx: 0, vy: 0, angle: -Math.PI / 2, radius: 10 };
@@ -82,6 +87,7 @@ function spawnAsteroid(): Asteroid {
 
 export function StarblastGame({ onGameOver }: StarblastGameProps) {
   const t = useTranslations('games');
+  const { unlock } = useAchievements();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const keysRef = useRef<Set<string>>(new Set());
   const shipRef = useRef<Ship>(createShip());
@@ -93,6 +99,23 @@ export function StarblastGame({ onGameOver }: StarblastGameProps) {
   const overRef = useRef(false);
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(false);
+  const [best, setBest] = useState(0);
+
+  useEffect(() => {
+    try {
+      const stored = window.localStorage.getItem(BEST_KEY);
+      if (stored) setBest(parseInt(stored, 10) || 0);
+    } catch {
+      // ignore
+    }
+  }, []);
+
+  const press = useCallback((key: string) => {
+    keysRef.current.add(key.toLowerCase());
+  }, []);
+  const release = useCallback((key: string) => {
+    keysRef.current.delete(key.toLowerCase());
+  }, []);
 
   const reset = useCallback((): void => {
     shipRef.current = createShip();
@@ -163,6 +186,7 @@ export function StarblastGame({ onGameOver }: StarblastGameProps) {
             life: BULLET_LIFE
           });
           cooldownRef.current = 10;
+          blip(880, 0.05, 'square');
         }
 
         bulletsRef.current = bulletsRef.current.filter((bullet) => {
@@ -191,15 +215,30 @@ export function StarblastGame({ onGameOver }: StarblastGameProps) {
               bulletsRef.current.splice(i, 1);
               scoreRef.current += 10;
               setScore(scoreRef.current);
+              blip(220, 0.12, 'sawtooth');
               break;
             }
           }
           if (!hit) {
             const dx = ship.x - asteroid.x;
             const dy = ship.y - asteroid.y;
-            if (dx * dx + dy * dy < (ship.radius + asteroid.radius) * (ship.radius + asteroid.radius)) {
+            if (
+              dx * dx + dy * dy <
+              (ship.radius + asteroid.radius) * (ship.radius + asteroid.radius)
+            ) {
               overRef.current = true;
               setGameOver(true);
+              chord([110, 82, 55], 0.3);
+              unlock('gamer');
+              setBest((current) => {
+                const next = Math.max(current, scoreRef.current);
+                try {
+                  window.localStorage.setItem(BEST_KEY, String(next));
+                } catch {
+                  // ignore
+                }
+                return next;
+              });
               onGameOver(scoreRef.current);
             } else {
               remaining.push(asteroid);
@@ -253,7 +292,7 @@ export function StarblastGame({ onGameOver }: StarblastGameProps) {
 
     raf = window.requestAnimationFrame(step);
     return () => window.cancelAnimationFrame(raf);
-  }, [onGameOver]);
+  }, [onGameOver, unlock]);
 
   return (
     <div className="relative h-full w-full">
@@ -264,12 +303,18 @@ export function StarblastGame({ onGameOver }: StarblastGameProps) {
         aria-label={t('starblast')}
         className="block h-full w-full"
       />
-      <div className="pointer-events-none absolute left-3 top-3 rounded-full bg-black/60 px-3 py-1 font-mono text-xs text-emerald-300">
-        {t('score')}: {score}
+      <div className="pointer-events-none absolute left-3 top-3 flex gap-3 rounded-full bg-black/60 px-3 py-1 font-mono text-xs text-emerald-300">
+        <span>
+          {t('score')}: {score}
+        </span>
+        <span className="text-foreground/60">
+          {t('bestScore')}: {best}
+        </span>
       </div>
       <p className="pointer-events-none absolute bottom-3 left-3 right-3 text-center font-mono text-[10px] text-white/60">
         {t('starblastControls')}
       </p>
+      <TouchControls onPress={press} onRelease={release} actionLabel={t('fire')} />
       {gameOver && (
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/70 text-white">
           <p className="text-2xl font-semibold">{t('gameOver')}</p>

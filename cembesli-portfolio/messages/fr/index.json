@@ -8,8 +8,16 @@
     "stack": "Outils",
     "games": "Jeux",
     "contact": "Contact",
+    "dashboard": "Tableau de bord",
+    "uses": "Materiel",
+    "now": "Actuel",
+    "changelog": "Journal",
     "theme": "Changer le theme",
-    "language": "Langue"
+    "language": "Langue",
+    "menu": "Menu",
+    "close": "Fermer",
+    "skipToContent": "Aller au contenu principal",
+    "commandPalette": "Ouvrir la palette de commandes"
   },
   "hero": {
     "name": "Cem Besli",
@@ -19,7 +27,8 @@
     "tagline": "Je concois des logiciels interactifs, performants et resilients sur toute la pile.",
     "viewProjects": "Voir les Projets",
     "contact": "Me Contacter",
-    "openCV": "Ouvrir le CV"
+    "openCV": "Ouvrir le CV",
+    "bookCall": "Reserver un appel"
   },
   "github": {
     "title": "En direct de GitHub",
@@ -30,7 +39,8 @@
     "forks": "forks",
     "viewProfile": "Voir le profil",
     "loading": "Chargement des depots",
-    "error": "Impossible de charger les donnees GitHub pour le moment."
+    "error": "Impossible de charger les donnees GitHub pour le moment.",
+    "contributions": "Contributions sur l annee ecoulee"
   },
   "python": {
     "title": "Python dans le Navigateur",
@@ -40,6 +50,18 @@
     "reset": "Reinitialiser",
     "loading": "Chargement du moteur Pyodide",
     "ready": "Moteur pret"
+  },
+  "ai": {
+    "title": "Interroger mon Portfolio",
+    "subtitle": "Un assistant IA forme sur mon CV. Posez vos questions.",
+    "placeholder": "Sur quoi travaillait Cem en dernier ?",
+    "send": "Envoyer",
+    "thinking": "Reflexion",
+    "examples": "Essayez de demander",
+    "ex1": "Sur quoi Cem travaille t il actuellement ?",
+    "ex2": "Parle moi du projet IoT solaire.",
+    "ex3": "Quels postes interessent Cem ?",
+    "unavailable": "Le chat est hors ligne. Configurez ANTHROPIC_API_KEY pour l activer."
   },
   "games": {
     "title": "Jeux Interactifs",
@@ -68,7 +90,11 @@
     "spawnSoldier": "Soldat",
     "spawnArcher": "Archer",
     "spawnTank": "Tank",
-    "noScores": "Aucun score pour l instant. Soyez le premier."
+    "noScores": "Aucun score pour l instant. Soyez le premier.",
+    "mute": "Couper le son",
+    "unmute": "Activer le son",
+    "bestScore": "Meilleur",
+    "fire": "Tirer"
   },
   "stack": {
     "title": "Pile Technique",
@@ -77,6 +103,19 @@
     "frameworks": "Frameworks",
     "tools": "Outils",
     "cloud": "Cloud"
+  },
+  "radar": {
+    "title": "Radar Technologique",
+    "subtitle": "Mon positionnement sur chaque outil. Adopter, Essayer, Evaluer ou Suspendre.",
+    "adopt": "Adopter",
+    "trial": "Essayer",
+    "assess": "Evaluer",
+    "hold": "Suspendre"
+  },
+  "timeline": {
+    "title": "Parcours et Experience",
+    "subtitle": "Formation et historique professionnel.",
+    "present": "Aujourd hui"
   },
   "architecture": {
     "title": "Etude d Architecture",
@@ -101,10 +140,89 @@
     "subtitle": "Ouvert aux postes a Ottawa, Ontario et a distance dans le monde.",
     "email": "Courriel",
     "github": "GitHub",
-    "linkedin": "LinkedIn"
+    "linkedin": "LinkedIn",
+    "booking": "Reserver un echange"
+  },
+  "achievements": {
+    "title": "Succes",
+    "unlock": "Debloque",
+    "explorer": "Explorateur",
+    "explorerDesc": "A visite le portfolio.",
+    "polyglot": "Polyglotte",
+    "polyglotDesc": "A essaye plus d une langue.",
+    "themeShifter": "Changeur de Theme",
+    "themeShifterDesc": "A bascule le theme.",
+    "pythonista": "Pythoniste",
+    "pythonistaDesc": "A execute du Python dans le navigateur.",
+    "gamer": "Joueur",
+    "gamerDesc": "A perdu une partie complete.",
+    "conqueror": "Conquerant",
+    "conquerorDesc": "A joue aux trois jeux.",
+    "curious": "Curieux",
+    "curiousDesc": "A ouvert la palette de commandes.",
+    "secret": "Agent Secret",
+    "secretDesc": "A trouve le code cache."
+  },
+  "cmdk": {
+    "placeholder": "Tapez une commande ou recherchez",
+    "navigate": "Naviguer",
+    "actions": "Actions",
+    "external": "Externe"
+  },
+  "dashboard": {
+    "title": "Tableau de Bord Solaire en Direct",
+    "subtitle": "Diffusion de relevés simules de mon systeme IoT solaire. Aliments par Supabase Realtime en production.",
+    "power": "Puissance",
+    "weather": "Meteo",
+    "peak": "Pic du jour",
+    "average": "Moyenne",
+    "panels": "Panneaux en ligne",
+    "watts": "watts",
+    "history": "Soixante derniers relevés"
+  },
+  "uses": {
+    "title": "Mon Materiel",
+    "subtitle": "Mon equipement actuel. Mis a jour quand cela change.",
+    "hardware": "Materiel",
+    "software": "Logiciels",
+    "services": "Services",
+    "everyday": "Quotidien"
+  },
+  "now": {
+    "title": "Ce que je fais en ce moment",
+    "subtitle": "Document vivant de mes priorites actuelles."
+  },
+  "changelog": {
+    "title": "Journal des Changements",
+    "subtitle": "Liste publique de ce que j ai livre et quand."
+  },
+  "status": {
+    "title": "Etat des Systemes",
+    "subtitle": "Signaux en direct de ce portfolio et de mes services.",
+    "operational": "Operationnel",
+    "degraded": "Degrade",
+    "down": "Hors service",
+    "uptime": "Disponibilite",
+    "responseTime": "Temps de reponse",
+    "lastDeploy": "Dernier deploiement",
+    "checkAgain": "Verifier a nouveau"
+  },
+  "projects": {
+    "title": "Etudes de Cas",
+    "subtitle": "Projets choisis avec le probleme, la conception et les enseignements.",
+    "problem": "Probleme",
+    "design": "Conception",
+    "stack": "Pile",
+    "lessons": "Enseignements",
+    "back": "Retour a l accueil",
+    "view": "Lire l etude",
+    "viewCode": "Voir le code"
   },
   "footer": {
     "rights": "Tous droits reserves.",
-    "built": "Construit avec Next.js, TypeScript, Tailwind et Supabase."
+    "built": "Construit avec Next.js, TypeScript, Tailwind et Supabase.",
+    "status": "Statut",
+    "uses": "Materiel",
+    "now": "Actuel"
   }
 }

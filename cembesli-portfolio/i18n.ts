@@ -1,10 +1,17 @@
 // next-intl runtime configuration loading locale specific messages
-// Uses the modern requestLocale API with a defensive fallback to the default locale
+// Supports EN, FR, DE, TR with defensive fallback to default locale
 import { getRequestConfig } from 'next-intl/server';
 
-export const locales = ['en', 'fr', 'de'] as const;
+export const locales = ['en', 'fr', 'de', 'tr'] as const;
 export const defaultLocale = 'en';
 export type Locale = (typeof locales)[number];
+
+export const localeNames: Record<Locale, string> = {
+  en: 'English',
+  fr: 'Francais',
+  de: 'Deutsch',
+  tr: 'Turkce'
+};
 
 function isLocale(value: string | undefined): value is Locale {
   return typeof value === 'string' && (locales as readonly string[]).includes(value);

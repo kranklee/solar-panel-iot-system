@@ -4,6 +4,8 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { blip, chord } from '@/lib/sound';
+import { useAchievements } from '@/components/providers/AchievementsProvider';
 
 interface AgeOfWarGameProps {
   onGameOver: (score: number) => void;
@@ -47,6 +49,7 @@ const BASE_MAX_HP = 100;
 
 export function AgeOfWarGame({ onGameOver }: AgeOfWarGameProps) {
   const t = useTranslations('games');
+  const { unlock } = useAchievements();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const unitsRef = useRef<Unit[]>([]);
   const idRef = useRef(0);
@@ -87,6 +90,7 @@ export function AgeOfWarGame({ onGameOver }: AgeOfWarGameProps) {
     if (goldRef.current < stats.cost) return;
     goldRef.current -= stats.cost;
     setGold(goldRef.current);
+    blip(440, 0.06, 'sine');
     idRef.current += 1;
     unitsRef.current.push({
       id: idRef.current,
@@ -193,10 +197,14 @@ export function AgeOfWarGame({ onGameOver }: AgeOfWarGameProps) {
         if (enemyHpRef.current <= 0) {
           overRef.current = 'win';
           setOutcome('win');
+          chord([523, 659, 784], 0.3);
+          unlock('gamer');
           onGameOver(Math.round(waveRef.current * 100 + Math.max(0, playerHpRef.current)));
         } else if (playerHpRef.current <= 0) {
           overRef.current = 'lose';
           setOutcome('lose');
+          chord([196, 165, 131], 0.3);
+          unlock('gamer');
           onGameOver(Math.round(waveRef.current * 50));
         }
       }
@@ -229,7 +237,7 @@ export function AgeOfWarGame({ onGameOver }: AgeOfWarGameProps) {
 
     raf = window.requestAnimationFrame(step);
     return () => window.cancelAnimationFrame(raf);
-  }, [onGameOver]);
+  }, [onGameOver, unlock]);
 
   return (
     <div className="relative flex h-full w-full flex-col">

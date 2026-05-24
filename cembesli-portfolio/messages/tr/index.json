@@ -1,0 +1,228 @@
+{
+  "meta": {
+    "title": "Cem Besli. Yazilim Muhendisi ve Sistem Tasarimcisi",
+    "description": "Cem Besli tarafindan canli muhendislik calismalarini sunan, urun kalitesinde interaktif bir portfolyo."
+  },
+  "nav": {
+    "projects": "Projeler",
+    "stack": "Yiginim",
+    "games": "Oyunlar",
+    "contact": "Iletisim",
+    "dashboard": "Panel",
+    "uses": "Kullandiklarim",
+    "now": "Su an",
+    "changelog": "Surum Notlari",
+    "theme": "Temayi degistir",
+    "language": "Dil",
+    "menu": "Menu",
+    "close": "Kapat",
+    "skipToContent": "Ana icerige gec",
+    "commandPalette": "Komut paletini ac"
+  },
+  "hero": {
+    "name": "Cem Besli",
+    "role": "Yazilim Muhendisi",
+    "subrole": "Sistem Tasarimcisi ve Tam Yigin Gelistirici",
+    "location": "Ottawa, Ontario, Kanada",
+    "tagline": "Etkilesimli, performansli ve dayanikli yazilimi uctan uca kuruyorum.",
+    "viewProjects": "Projeleri Gor",
+    "contact": "Iletisime Gec",
+    "openCV": "CV yi Ac",
+    "bookCall": "Gorusme ayarla"
+  },
+  "github": {
+    "title": "GitHub Canli Akisi",
+    "subtitle": "Son depolarin gercek zamanli gorunumu",
+    "followers": "takipci",
+    "following": "takip",
+    "stars": "yildiz",
+    "forks": "fork",
+    "viewProfile": "Profili gor",
+    "loading": "Depolar yukleniyor",
+    "error": "GitHub verisi su an yuklenemedi.",
+    "contributions": "Son bir yildaki katkilar"
+  },
+  "python": {
+    "title": "Tarayicida Python",
+    "subtitle": "Pyodide bir Web Worker icinde calisir. Asagida gercek Python deneyin.",
+    "run": "Calistir",
+    "clear": "Temizle",
+    "reset": "Ornegi sifirla",
+    "loading": "Pyodide yuklemesi",
+    "ready": "Calismaya hazir"
+  },
+  "ai": {
+    "title": "Portfolyoma Sor",
+    "subtitle": "CV uzerinde egitilmis bir yapay zeka asistani. Sorun.",
+    "placeholder": "Cem en son neye calisiyordu?",
+    "send": "Gonder",
+    "thinking": "Dusunuyor",
+    "examples": "Sormayi deneyin",
+    "ex1": "Cem su an neye calisiyor?",
+    "ex2": "Solar panel IoT projesinden bahset.",
+    "ex3": "Cem hangi pozisyonlara aciktir?",
+    "unavailable": "Sohbet kapali. Aktiflestirmek icin ANTHROPIC_API_KEY ayarlayin."
+  },
+  "games": {
+    "title": "Interaktif Oyunlar",
+    "subtitle": "Oynayin ve skorunuzu global siralamaya gonderin.",
+    "starblast": "Starblast",
+    "ageofwar": "Age of War",
+    "dronesim": "Drone Simulatoru",
+    "leaderboard": "Siralama",
+    "yourName": "Adiniz",
+    "submit": "Gonder",
+    "play": "Oyna",
+    "pause": "Duraklat",
+    "restart": "Yeniden basla",
+    "score": "Skor",
+    "wave": "Dalga",
+    "gold": "Altin",
+    "waypoint": "Hedef",
+    "time": "Sure",
+    "gameOver": "Oyun bitti",
+    "youWin": "Kazandiniz",
+    "youLose": "Kaybettiniz",
+    "controls": "Kontroller",
+    "starblastControls": "WASD veya oklarla hareket. Bosluk ile ates.",
+    "ageofwarControls": "Bir birim dugmesine tiklayarak cagirin. Altin zamanla gelir.",
+    "dronesimControls": "WASD ile hareket. Hedefleri sirayla toplayin.",
+    "spawnSoldier": "Asker",
+    "spawnArcher": "Okcu",
+    "spawnTank": "Tank",
+    "noScores": "Henuz skor yok. Ilk olun.",
+    "mute": "Sesi kapat",
+    "unmute": "Sesi ac",
+    "bestScore": "En iyi",
+    "fire": "Ates"
+  },
+  "stack": {
+    "title": "Teknik Yigin",
+    "subtitle": "Urun cikarmak icin uzandigim araclar.",
+    "languages": "Diller",
+    "frameworks": "Cerceveler",
+    "tools": "Araclar",
+    "cloud": "Bulut"
+  },
+  "radar": {
+    "title": "Teknoloji Radari",
+    "subtitle": "Her arac uzerinde durusum. Adopt, Trial, Assess veya Hold.",
+    "adopt": "Adopt",
+    "trial": "Trial",
+    "assess": "Assess",
+    "hold": "Hold"
+  },
+  "timeline": {
+    "title": "Yol ve Deneyim",
+    "subtitle": "Egitim ve is gecmisi.",
+    "present": "Su an"
+  },
+  "architecture": {
+    "title": "Mimari Vaka Calismasi",
+    "subtitle": "Bu secimlerin nedeni ve veri sistem icinde nasil akiyor.",
+    "frontend": "Frontend",
+    "frontendBody": "Next.js 14 App Router ve React Server Components, Vercel Edge uzerinden dusuk gecikmeyle Ontario ve dunyaya yayinlanir.",
+    "api": "API Katmani",
+    "apiBody": "GitHub icin ISR onbellekli route handlers, Supabase yazimlari icin serverless fonksiyonlar.",
+    "database": "Veritabani",
+    "databaseBody": "Supabase PostgreSQL, Row Level Security ve Realtime abonelikleri global siralamayi besler.",
+    "deployment": "Dagitim",
+    "deploymentBody": "Vercel Edge Runtime ve her push icin tip kontrol, lint ve build zorlayan GitHub Actions."
+  },
+  "cv": {
+    "title": "Ozgecmis",
+    "download": "PDF indir",
+    "close": "Kapat",
+    "open": "CV yi Ac"
+  },
+  "contact": {
+    "title": "Iletisime Gec",
+    "subtitle": "Ottawa Ontario ve global uzaktan pozisyonlara aciktir.",
+    "email": "E posta",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "booking": "Gorusme ayarla"
+  },
+  "achievements": {
+    "title": "Basarimlar",
+    "unlock": "Kazanildi",
+    "explorer": "Kasif",
+    "explorerDesc": "Portfolyoyu ziyaret etti.",
+    "polyglot": "Cok dilli",
+    "polyglotDesc": "Birden fazla dil denedi.",
+    "themeShifter": "Tema Degistirici",
+    "themeShifterDesc": "Tema degistirildi.",
+    "pythonista": "Pythonista",
+    "pythonistaDesc": "Tarayicida Python calistirildi.",
+    "gamer": "Oyuncu",
+    "gamerDesc": "Bir oyunu sonuna kadar oynadi.",
+    "conqueror": "Fetheden",
+    "conquerorDesc": "Uc oyunun hepsini oynadi.",
+    "curious": "Merakli",
+    "curiousDesc": "Komut paletini acti.",
+    "secret": "Gizli Ajan",
+    "secretDesc": "Gizli kodu buldu."
+  },
+  "cmdk": {
+    "placeholder": "Bir komut yazin veya arayin",
+    "navigate": "Gez",
+    "actions": "Eylemler",
+    "external": "Dis Bagli"
+  },
+  "dashboard": {
+    "title": "Canli Solar Panel Paneli",
+    "subtitle": "Solar panel IoT sistemimden simule veriler. Uretimde Supabase Realtime ile beslenir.",
+    "power": "Guc cikisi",
+    "weather": "Hava",
+    "peak": "Bugunun tepesi",
+    "average": "Ortalama",
+    "panels": "Cevrimici panel",
+    "watts": "watt",
+    "history": "Son altmis okuma"
+  },
+  "uses": {
+    "title": "Kullandiklarim",
+    "subtitle": "Su anki kurulumum. Degisince guncellenir.",
+    "hardware": "Donanim",
+    "software": "Yazilim",
+    "services": "Hizmetler",
+    "everyday": "Gunluk"
+  },
+  "now": {
+    "title": "Su an ne yapiyorum",
+    "subtitle": "Su anki odaklarimin canli belgesi."
+  },
+  "changelog": {
+    "title": "Surum Notlari",
+    "subtitle": "Ne ve ne zaman yayinladigima dair acik kayit."
+  },
+  "status": {
+    "title": "Sistem Durumu",
+    "subtitle": "Bu portfolyo ve hizmetlerimden canli sinyaller.",
+    "operational": "Calisiyor",
+    "degraded": "Dusuk performansli",
+    "down": "Devre disi",
+    "uptime": "Ayakta sure",
+    "responseTime": "Yanit suresi",
+    "lastDeploy": "Son dagitim",
+    "checkAgain": "Tekrar kontrol et"
+  },
+  "projects": {
+    "title": "Vaka Calismalari",
+    "subtitle": "Sorun, tasarim ve kazanimlarla secilmis projeler.",
+    "problem": "Sorun",
+    "design": "Tasarim",
+    "stack": "Yigin",
+    "lessons": "Kazanimlar",
+    "back": "Anasayfaya don",
+    "view": "Vakayi oku",
+    "viewCode": "Kodu gor"
+  },
+  "footer": {
+    "rights": "Tum haklari saklidir.",
+    "built": "Next.js, TypeScript, Tailwind ve Supabase ile insa edildi.",
+    "status": "Durum",
+    "uses": "Kullandiklarim",
+    "now": "Su an"
+  }
+}

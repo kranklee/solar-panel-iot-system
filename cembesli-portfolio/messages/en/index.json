@@ -8,8 +8,16 @@
     "stack": "Stack",
     "games": "Games",
     "contact": "Contact",
+    "dashboard": "Dashboard",
+    "uses": "Uses",
+    "now": "Now",
+    "changelog": "Changelog",
     "theme": "Toggle theme",
-    "language": "Language"
+    "language": "Language",
+    "menu": "Menu",
+    "close": "Close",
+    "skipToContent": "Skip to main content",
+    "commandPalette": "Open command palette"
   },
   "hero": {
     "name": "Cem Besli",
@@ -19,7 +27,8 @@
     "tagline": "I build interactive, performant, and resilient software across the stack.",
     "viewProjects": "View Projects",
     "contact": "Get in Touch",
-    "openCV": "Open CV"
+    "openCV": "Open CV",
+    "bookCall": "Book a call"
   },
   "github": {
     "title": "Live from GitHub",
@@ -30,7 +39,8 @@
     "forks": "forks",
     "viewProfile": "View profile",
     "loading": "Loading repositories",
-    "error": "Could not load GitHub data right now."
+    "error": "Could not load GitHub data right now.",
+    "contributions": "Contributions in the last year"
   },
   "python": {
     "title": "Python in the Browser",
@@ -40,6 +50,18 @@
     "reset": "Reset example",
     "loading": "Loading Pyodide runtime",
     "ready": "Runtime ready"
+  },
+  "ai": {
+    "title": "Ask My Portfolio",
+    "subtitle": "An AI assistant trained on my CV. Ask anything.",
+    "placeholder": "What was Cem working on last?",
+    "send": "Send",
+    "thinking": "Thinking",
+    "examples": "Try asking",
+    "ex1": "What is Cem currently building?",
+    "ex2": "Tell me about the solar panel IoT project.",
+    "ex3": "What roles is Cem open to?",
+    "unavailable": "Chat is offline. Configure ANTHROPIC_API_KEY to enable."
   },
   "games": {
     "title": "Interactive Games",
@@ -68,7 +90,11 @@
     "spawnSoldier": "Soldier",
     "spawnArcher": "Archer",
     "spawnTank": "Tank",
-    "noScores": "No scores yet. Be the first."
+    "noScores": "No scores yet. Be the first.",
+    "mute": "Mute sound",
+    "unmute": "Unmute sound",
+    "bestScore": "Best",
+    "fire": "Fire"
   },
   "stack": {
     "title": "Tech Stack",
@@ -77,6 +103,19 @@
     "frameworks": "Frameworks",
     "tools": "Tools",
     "cloud": "Cloud"
+  },
+  "radar": {
+    "title": "Tech Radar",
+    "subtitle": "Where I stand on each tool. Adopt, Trial, Assess, or Hold.",
+    "adopt": "Adopt",
+    "trial": "Trial",
+    "assess": "Assess",
+    "hold": "Hold"
+  },
+  "timeline": {
+    "title": "Path and Experience",
+    "subtitle": "Education and work history.",
+    "present": "Present"
   },
   "architecture": {
     "title": "Architecture Case Study",
@@ -101,10 +140,89 @@
     "subtitle": "Open to roles in Ottawa, Ontario, and remote globally.",
     "email": "Email",
     "github": "GitHub",
-    "linkedin": "LinkedIn"
+    "linkedin": "LinkedIn",
+    "booking": "Book a chat"
+  },
+  "achievements": {
+    "title": "Achievements",
+    "unlock": "Unlocked",
+    "explorer": "Explorer",
+    "explorerDesc": "Visited the portfolio.",
+    "polyglot": "Polyglot",
+    "polyglotDesc": "Tried more than one language.",
+    "themeShifter": "Theme Shifter",
+    "themeShifterDesc": "Toggled the theme.",
+    "pythonista": "Pythonista",
+    "pythonistaDesc": "Ran Python in the browser.",
+    "gamer": "Gamer",
+    "gamerDesc": "Played a game to game over.",
+    "conqueror": "Conqueror",
+    "conquerorDesc": "Played all three games.",
+    "curious": "Curious",
+    "curiousDesc": "Opened the command palette.",
+    "secret": "Secret Agent",
+    "secretDesc": "Found the hidden cheat code."
+  },
+  "cmdk": {
+    "placeholder": "Type a command or search",
+    "navigate": "Navigate",
+    "actions": "Actions",
+    "external": "External"
+  },
+  "dashboard": {
+    "title": "Live Solar Panel Dashboard",
+    "subtitle": "Streaming simulated readings from my solar panel IoT system. Powered by Supabase Realtime in production.",
+    "power": "Power output",
+    "weather": "Weather",
+    "peak": "Peak today",
+    "average": "Average",
+    "panels": "Panels online",
+    "watts": "watts",
+    "history": "Last sixty readings"
+  },
+  "uses": {
+    "title": "What I Use",
+    "subtitle": "My current setup. Updated when things change.",
+    "hardware": "Hardware",
+    "software": "Software",
+    "services": "Services",
+    "everyday": "Everyday"
+  },
+  "now": {
+    "title": "What I am doing now",
+    "subtitle": "A living document of current focus."
+  },
+  "changelog": {
+    "title": "Changelog",
+    "subtitle": "Public log of what I shipped and when."
+  },
+  "status": {
+    "title": "System Status",
+    "subtitle": "Live signals from this portfolio and my services.",
+    "operational": "Operational",
+    "degraded": "Degraded",
+    "down": "Down",
+    "uptime": "Uptime",
+    "responseTime": "Response time",
+    "lastDeploy": "Last deploy",
+    "checkAgain": "Check again"
+  },
+  "projects": {
+    "title": "Case Studies",
+    "subtitle": "Selected projects with the problem, the design, and what I learned.",
+    "problem": "Problem",
+    "design": "Design",
+    "stack": "Stack",
+    "lessons": "Lessons learned",
+    "back": "Back to home",
+    "view": "Read case study",
+    "viewCode": "View code"
   },
   "footer": {
     "rights": "All rights reserved.",
-    "built": "Built with Next.js, TypeScript, Tailwind, and Supabase."
+    "built": "Built with Next.js, TypeScript, Tailwind, and Supabase.",
+    "status": "Status",
+    "uses": "Uses",
+    "now": "Now"
   }
 }

@@ -1,10 +1,13 @@
-// Top down drone simulator with wind physics and ordered waypoint collection
-// Score is derived from remaining time when the final waypoint is reached
+// Top down drone simulator with wind physics, sound, and touch controls
+// Score derived from remaining time when the final waypoint is reached
 'use client';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { formatTime } from '@/lib/utils';
+import { TouchControls } from './TouchControls';
+import { blip, chord } from '@/lib/sound';
+import { useAchievements } from '@/components/providers/AchievementsProvider';
 
 interface DroneSimGameProps {
   onGameOver: (score: number) => void;
@@ -26,6 +29,7 @@ const WIDTH = 640;
 const HEIGHT = 320;
 const ACCEL = 0.18;
 const DRAG = 0.96;
+const BEST_KEY = 'cembesli.best.dronesim';
 const WAYPOINTS: Waypoint[] = [
   { x: 110, y: 80 },
   { x: 520, y: 70 },
@@ -44,6 +48,7 @@ function randomWind(): { wx: number; wy: number } {
 
 export function DroneSimGame({ onGameOver }: DroneSimGameProps) {
   const t = useTranslations('games');
+  const { unlock } = useAchievements();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const droneRef = useRef<Drone>(createDrone());
   const keysRef = useRef<Set<string>>(new Set());
@@ -56,6 +61,23 @@ export function DroneSimGame({ onGameOver }: DroneSimGameProps) {
   const [elapsed, setElapsed] = useState(0);
   const [done, setDone] = useState(false);
   const [score, setScore] = useState(0);
+  const [best, setBest] = useState(0);
+
+  useEffect(() => {
+    try {
+      const stored = window.localStorage.getItem(BEST_KEY);
+      if (stored) setBest(parseInt(stored, 10) || 0);
+    } catch {
+      // ignore
+    }
+  }, []);
+
+  const press = useCallback((key: string) => {
+    keysRef.current.add(key.toLowerCase());
+  }, []);
+  const release = useCallback((key: string) => {
+    keysRef.current.delete(key.toLowerCase());
+  }, []);
 
   const reset = useCallback((): void => {
     droneRef.current = createDrone();
@@ -72,9 +94,11 @@ export function DroneSimGame({ onGameOver }: DroneSimGameProps) {
   useEffect(() => {
     function down(event: KeyboardEvent): void {
       keysRef.current.add(event.key.toLowerCase());
-      if (['w', 'a', 's', 'd', 'arrowup', 'arrowdown', 'arrowleft', 'arrowright'].includes(
-        event.key.toLowerCase()
-      )) {
+      if (
+        ['w', 'a', 's', 'd', 'arrowup', 'arrowdown', 'arrowleft', 'arrowright'].includes(
+          event.key.toLowerCase()
+        )
+      ) {
         event.preventDefault();
       }
     }
@@ -138,12 +162,24 @@ export function DroneSimGame({ onGameOver }: DroneSimGameProps) {
         if (dx * dx + dy * dy < 18 * 18) {
           targetRef.current += 1;
           setTargetIndex(targetRef.current);
+          blip(660, 0.1, 'triangle');
           if (targetRef.current >= WAYPOINTS.length) {
             const elapsedMs = startedRef.current ? performance.now() - startedRef.current : 0;
             const final = Math.max(0, Math.floor((60_000 - elapsedMs) / 100));
             overRef.current = true;
             setScore(final);
             setDone(true);
+            chord([523, 659, 784], 0.25);
+            unlock('gamer');
+            setBest((current) => {
+              const next = Math.max(current, final);
+              try {
+                window.localStorage.setItem(BEST_KEY, String(next));
+              } catch {
+                // ignore
+              }
+              return next;
+            });
             onGameOver(final);
           }
         }
@@ -211,7 +247,7 @@ export function DroneSimGame({ onGameOver }: DroneSimGameProps) {
 
     raf = window.requestAnimationFrame(step);
     return () => window.cancelAnimationFrame(raf);
-  }, [onGameOver]);
+  }, [onGameOver, unlock]);
 
   return (
     <div className="relative h-full w-full">
@@ -229,10 +265,14 @@ export function DroneSimGame({ onGameOver }: DroneSimGameProps) {
         <span>
           {t('time')}: {formatTime(elapsed)}
         </span>
+        <span className="text-foreground/60">
+          {t('bestScore')}: {best}
+        </span>
       </div>
       <p className="pointer-events-none absolute bottom-3 left-3 right-3 text-center font-mono text-[10px] text-white/60">
         {t('dronesimControls')}
       </p>
+      <TouchControls onPress={press} onRelease={release} actionLabel={t('play')} />
       {done && (
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/70 text-white">
           <p className="text-2xl font-semibold">{t('youWin')}</p>
