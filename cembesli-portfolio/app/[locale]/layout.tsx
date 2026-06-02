@@ -94,15 +94,23 @@ export default async function LocaleLayout({
     jobTitle: 'Software Engineer',
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Ottawa',
-      addressRegion: 'Ontario',
-      addressCountry: 'Canada'
+      addressCountry: 'Germany'
     },
+    nationality: 'Turkish',
     alumniOf: {
       '@type': 'CollegeOrUniversity',
       name: 'Centennial College'
     },
-    knowsLanguage: ['English', 'French', 'German', 'Turkish'],
+    knowsLanguage: [
+      { '@type': 'Language', name: 'Turkish', alternateName: 'tr' },
+      { '@type': 'Language', name: 'English', alternateName: 'en' },
+      { '@type': 'Language', name: 'German', alternateName: 'de' },
+      { '@type': 'Language', name: 'French', alternateName: 'fr' }
+    ],
+    seeks: {
+      '@type': 'Demand',
+      name: 'Software engineering roles in Berlin, Munich, Cologne, or remote across the EU'
+    },
     sameAs: [
       'https://github.com/kranklee',
       'https://www.linkedin.com/in/cembesli'

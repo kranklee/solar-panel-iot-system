@@ -1,5 +1,5 @@
-// Shared site footer with copyright, status link, and credit line
-// Server rendered so it appears identically on every locale segment
+// Shared site footer with copyright, status link, legal section, and credit line
+// Legal section is mandatory in Germany so the Impressum and Datenschutz links sit here on every page
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
@@ -27,9 +27,35 @@ export function Footer() {
               {t('now')}
             </Link>
           </li>
+          <li>
+            <Link href="/lebenslauf" className="hover:text-primary">
+              {t('lebenslauf')}
+            </Link>
+          </li>
         </ul>
       </div>
-      <p className="mt-3 text-xs">{t('built')}</p>
+
+      <div className="mt-4 flex flex-col gap-2 border-t pt-4 sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-xs">{t('built')}</p>
+        <ul
+          aria-label={t('legal')}
+          className="flex flex-wrap items-center gap-3 text-xs"
+        >
+          <li className="font-semibold uppercase tracking-widest text-foreground/40">
+            {t('legal')}
+          </li>
+          <li>
+            <Link href="/impressum" className="hover:text-primary">
+              {t('impressum')}
+            </Link>
+          </li>
+          <li>
+            <Link href="/datenschutz" className="hover:text-primary">
+              {t('datenschutz')}
+            </Link>
+          </li>
+        </ul>
+      </div>
     </footer>
   );
 }

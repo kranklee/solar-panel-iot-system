@@ -14,11 +14,18 @@ interface Entry {
 
 const ENTRIES: Entry[] = [
   {
-    start: '2022',
+    start: '2026',
     end: null,
-    title: 'Centennial College, Toronto',
-    body: 'Software Engineering Technology, sixth semester. Studying systems, web, and applied AI.',
-    tag: 'education'
+    title: 'Relocated to Germany',
+    body: 'Now based in Germany. Open to roles in Berlin, Munich, Cologne, and remote across the EU. EU Blue Card eligible at the IT Mangelberuf threshold.',
+    tag: 'project'
+  },
+  {
+    start: '2025',
+    end: null,
+    title: 'cembesli.com portfolio',
+    body: 'Next.js 14, TypeScript strict, Supabase realtime, Pyodide in browser, three canvas games, AI assistant streaming from Claude.',
+    tag: 'project'
   },
   {
     start: '2025',
@@ -28,11 +35,11 @@ const ENTRIES: Entry[] = [
     tag: 'project'
   },
   {
-    start: '2025',
-    end: null,
-    title: 'cembesli.com portfolio',
-    body: 'Next.js 14, TypeScript strict, Supabase realtime, Pyodide in browser, three canvas games.',
-    tag: 'project'
+    start: '2022',
+    end: '2026',
+    title: 'Centennial College, Toronto',
+    body: 'Software Engineering Technology. Systems, web, and applied AI.',
+    tag: 'education'
   }
 ];
 

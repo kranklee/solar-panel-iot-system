@@ -12,6 +12,9 @@
     "uses": "Uses",
     "now": "Now",
     "changelog": "Changelog",
+    "lebenslauf": "Lebenslauf",
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutz",
     "theme": "Toggle theme",
     "language": "Language",
     "menu": "Menu",
@@ -23,7 +26,8 @@
     "name": "Cem Besli",
     "role": "Software Engineer",
     "subrole": "Systems Builder and Full Stack Developer",
-    "location": "Ottawa, Ontario, Canada",
+    "location": "Based in Germany",
+    "availability": "Open to roles in Berlin, Munich, Cologne, and remote across the EU",
     "tagline": "I build interactive, performant, and resilient software across the stack.",
     "viewProjects": "View Projects",
     "contact": "Get in Touch",
@@ -137,7 +141,7 @@
   },
   "contact": {
     "title": "Get in Touch",
-    "subtitle": "Open to roles in Ottawa, Ontario, and remote globally.",
+    "subtitle": "Based in Germany. Open to Berlin, Munich, Cologne, and remote across the EU.",
     "email": "Email",
     "github": "GitHub",
     "linkedin": "LinkedIn",
@@ -223,6 +227,10 @@
     "built": "Built with Next.js, TypeScript, Tailwind, and Supabase.",
     "status": "Status",
     "uses": "Uses",
-    "now": "Now"
+    "now": "Now",
+    "legal": "Legal",
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutz",
+    "lebenslauf": "Lebenslauf"
   }
 }

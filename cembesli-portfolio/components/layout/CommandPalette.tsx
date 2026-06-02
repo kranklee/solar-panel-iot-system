@@ -77,7 +77,10 @@ export function CommandPalette({ locale }: CommandPaletteProps) {
       { id: 'uses', label: tNav('uses'), group: 'navigate', perform: go('/uses') },
       { id: 'now', label: tNav('now'), group: 'navigate', perform: go('/now') },
       { id: 'changelog', label: tNav('changelog'), group: 'navigate', perform: go('/changelog') },
+      { id: 'lebenslauf', label: tNav('lebenslauf'), group: 'navigate', perform: go('/lebenslauf') },
       { id: 'status', label: 'Status', group: 'navigate', perform: go('/status') },
+      { id: 'impressum', label: tNav('impressum'), group: 'navigate', perform: go('/impressum') },
+      { id: 'datenschutz', label: tNav('datenschutz'), group: 'navigate', perform: go('/datenschutz') },
       { id: 'cv', label: tCv('open'), group: 'actions', perform: go('#projects') },
       { id: 'theme', label: tNav('theme'), group: 'actions', perform: toggleTheme },
       {

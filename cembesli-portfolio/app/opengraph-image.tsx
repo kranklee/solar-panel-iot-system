@@ -52,7 +52,7 @@ export default async function Image() {
             Systems Builder and Full Stack Developer
           </p>
           <p style={{ fontSize: 22, opacity: 0.55, marginTop: 16 }}>
-            Ottawa, Ontario, Canada
+            Based in Germany. Open to Berlin, Munich, Cologne, and remote across the EU.
           </p>
         </div>
 

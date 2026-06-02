@@ -26,7 +26,12 @@ export default function LocaleHomePage({ params }: { params: { locale: string } 
         <p className="mt-4 max-w-2xl text-lg text-foreground/70 dark:text-bg/70 sm:text-xl">
           {t('subrole')}
         </p>
-        <p className="mt-2 text-sm text-foreground/50 dark:text-bg/50">{t('location')}</p>
+        <p className="mt-2 flex flex-wrap items-center gap-2 text-sm text-foreground/50 dark:text-bg/50">
+          <span aria-hidden="true">DE</span>
+          <span>{t('location')}</span>
+          <span aria-hidden="true" className="opacity-50">/</span>
+          <span className="text-foreground/70 dark:text-bg/70">{t('availability')}</span>
+        </p>
         <p className="mt-6 max-w-2xl text-base text-foreground/80 dark:text-bg/80">
           {t('tagline')}
         </p>

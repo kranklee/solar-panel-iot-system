@@ -6,16 +6,20 @@ const UPDATED_AT = '2026-05-24';
 
 const FOCUS = [
   {
+    title: 'Settling in Germany',
+    body: 'Now based in Germany. Open to full stack and platform roles in Berlin, Munich, Cologne, and remote across the EU. EU Blue Card eligible at the IT Mangelberuf threshold.'
+  },
+  {
+    title: 'German at B1 to B2',
+    body: 'Holding daily conversations and reading technical content in German. Pushing toward C1 with newspapers and tech podcasts.'
+  },
+  {
     title: 'Shipping cembesli.com v1.1',
-    body: 'Adding the AI assistant, the live solar panel dashboard, and a command palette. Cleaning up mobile and accessibility along the way.'
+    body: 'AI assistant, live solar panel dashboard, command palette, and the Lebenslauf-format CV for German recruiters. Cleaning up mobile and accessibility along the way.'
   },
   {
     title: 'Finishing the IoT capstone',
     body: 'Refactoring the MQTT publisher and subscriber so they share a typed schema. Targeting persistent storage in Supabase Postgres so the dashboard has history.'
-  },
-  {
-    title: 'Job applications',
-    body: 'Targeting full stack and platform roles in Ottawa, plus remote across Canada. Open to internships through summer 2026.'
   },
   {
     title: 'Reading',

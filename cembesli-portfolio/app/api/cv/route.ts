@@ -6,13 +6,17 @@ export const runtime = 'edge';
 export const revalidate = 3600;
 
 const CV = `# Cem Besli
-Software Engineer  ·  Ottawa, Ontario, Canada
+Software Engineer  ·  Based in Germany
 cem@cembesli.com  ·  github.com/kranklee  ·  cembesli.com
 
 ## Summary
-Sixth semester Software Engineering Technology student at Centennial College.
-I build interactive, performant, and resilient software across the stack.
-Comfortable in TypeScript, Next.js, React, Node, Python, and Postgres.
+Software Engineering Technology graduate from Centennial College now based in
+Germany. I build interactive, performant, and resilient software across the
+stack. Comfortable in TypeScript, Next.js, React, Node, Python, and Postgres.
+
+## Availability
+Open to roles in Berlin, Munich, Cologne, and remote across the EU.
+EU Blue Card eligible at the IT shortage threshold (Mangelberuf).
 
 ## Education
 Centennial College, Toronto  ·  Software Engineering Technology  ·  2022 to 2026
@@ -31,8 +35,11 @@ Frameworks  Next.js, React, Node, Tailwind, FastAPI
 Cloud       Vercel, Supabase, AWS, Cloudflare
 Tools       Git, GitHub Actions, Docker, Playwright
 
-## Languages spoken
-English, French, German, Turkish
+## Languages
+Turkish     Native
+English     C1
+German      B1 to B2
+French      B1
 
 ## Contact
 Email     cem@cembesli.com

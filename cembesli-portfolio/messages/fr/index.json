@@ -12,6 +12,9 @@
     "uses": "Materiel",
     "now": "Actuel",
     "changelog": "Journal",
+    "lebenslauf": "Lebenslauf",
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutz",
     "theme": "Changer le theme",
     "language": "Langue",
     "menu": "Menu",
@@ -23,7 +26,8 @@
     "name": "Cem Besli",
     "role": "Ingenieur Logiciel",
     "subrole": "Architecte Systeme et Developpeur Full Stack",
-    "location": "Ottawa, Ontario, Canada",
+    "location": "Base en Allemagne",
+    "availability": "Ouvert aux postes a Berlin, Munich, Cologne, et en remote dans l UE",
     "tagline": "Je concois des logiciels interactifs, performants et resilients sur toute la pile.",
     "viewProjects": "Voir les Projets",
     "contact": "Me Contacter",
@@ -137,7 +141,7 @@
   },
   "contact": {
     "title": "Prenons Contact",
-    "subtitle": "Ouvert aux postes a Ottawa, Ontario et a distance dans le monde.",
+    "subtitle": "Base en Allemagne. Ouvert a Berlin, Munich, Cologne et en remote dans l UE.",
     "email": "Courriel",
     "github": "GitHub",
     "linkedin": "LinkedIn",
@@ -223,6 +227,10 @@
     "built": "Construit avec Next.js, TypeScript, Tailwind et Supabase.",
     "status": "Statut",
     "uses": "Materiel",
-    "now": "Actuel"
+    "now": "Actuel",
+    "legal": "Mentions legales",
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutz",
+    "lebenslauf": "Lebenslauf"
   }
 }

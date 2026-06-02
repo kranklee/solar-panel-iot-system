@@ -210,6 +210,15 @@ export function Navbar({ locale }: NavbarProps) {
                   {t('changelog')}
                 </Link>
               </li>
+              <li>
+                <Link
+                  href={`/${locale}/lebenslauf`}
+                  onClick={() => setDrawerOpen(false)}
+                  className="block rounded-2xl px-3 py-2 text-base font-medium hover:bg-black/5 dark:hover:bg-white/10"
+                >
+                  {t('lebenslauf')}
+                </Link>
+              </li>
             </ul>
 
             <div

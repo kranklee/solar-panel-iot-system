@@ -3,7 +3,18 @@
 import type { MetadataRoute } from 'next';
 import { locales } from '@/i18n';
 
-const ROUTES = ['', '/dashboard', '/uses', '/now', '/changelog', '/status', '/projects'];
+const ROUTES = [
+  '',
+  '/dashboard',
+  '/uses',
+  '/now',
+  '/changelog',
+  '/status',
+  '/projects',
+  '/lebenslauf',
+  '/impressum',
+  '/datenschutz'
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://cembesli.com';

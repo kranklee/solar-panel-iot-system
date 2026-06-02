@@ -12,6 +12,9 @@
     "uses": "Kullandiklarim",
     "now": "Su an",
     "changelog": "Surum Notlari",
+    "lebenslauf": "Lebenslauf",
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutz",
     "theme": "Temayi degistir",
     "language": "Dil",
     "menu": "Menu",
@@ -23,7 +26,8 @@
     "name": "Cem Besli",
     "role": "Yazilim Muhendisi",
     "subrole": "Sistem Tasarimcisi ve Tam Yigin Gelistirici",
-    "location": "Ottawa, Ontario, Kanada",
+    "location": "Almanya da",
+    "availability": "Berlin, Munih, Koeln ve AB icinde uzaktan calismaya aciktir",
     "tagline": "Etkilesimli, performansli ve dayanikli yazilimi uctan uca kuruyorum.",
     "viewProjects": "Projeleri Gor",
     "contact": "Iletisime Gec",
@@ -137,7 +141,7 @@
   },
   "contact": {
     "title": "Iletisime Gec",
-    "subtitle": "Ottawa Ontario ve global uzaktan pozisyonlara aciktir.",
+    "subtitle": "Almanya da. Berlin, Munih, Koeln ve AB icinde uzaktan calismaya aciktir.",
     "email": "E posta",
     "github": "GitHub",
     "linkedin": "LinkedIn",
@@ -223,6 +227,10 @@
     "built": "Next.js, TypeScript, Tailwind ve Supabase ile insa edildi.",
     "status": "Durum",
     "uses": "Kullandiklarim",
-    "now": "Su an"
+    "now": "Su an",
+    "legal": "Yasal",
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutz",
+    "lebenslauf": "Lebenslauf"
   }
 }

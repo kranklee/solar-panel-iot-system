@@ -10,13 +10,18 @@ export async function GET() {
   const payload = {
     name: 'Cem Besli',
     role: 'Software Engineer',
-    location: 'Ottawa, Ontario, Canada',
-    availability: 'Open to roles in Ottawa, Ontario, and remote globally',
-    languages: ['English', 'French', 'German', 'Turkish'],
+    location: 'Germany',
+    availability: 'Open to roles in Berlin, Munich, Cologne, and remote across the EU',
+    visa: 'EU Blue Card eligible at the IT Mangelberuf threshold',
+    languages: {
+      turkish: 'native',
+      english: 'C1',
+      german: 'B1 to B2',
+      french: 'B1'
+    },
     education: {
       school: 'Centennial College',
-      program: 'Software Engineering Technology',
-      semester: 6
+      program: 'Software Engineering Technology'
     },
     links: {
       site: siteUrl,
