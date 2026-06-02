@@ -20,7 +20,10 @@
     "menu": "Menu",
     "close": "Fermer",
     "skipToContent": "Aller au contenu principal",
-    "commandPalette": "Ouvrir la palette de commandes"
+    "commandPalette": "Ouvrir la palette de commandes",
+    "blog": "Blog",
+    "anschreiben": "Anschreiben",
+    "observability": "Observability"
   },
   "hero": {
     "name": "Cem Besli",
@@ -32,7 +35,10 @@
     "viewProjects": "Voir les Projets",
     "contact": "Me Contacter",
     "openCV": "Ouvrir le CV",
-    "bookCall": "Reserver un appel"
+    "bookCall": "Reserver un appel",
+    "available": "Disponible maintenant",
+    "anschreiben": "Generer une lettre",
+    "lebenslauf": "Ouvrir le Lebenslauf"
   },
   "github": {
     "title": "En direct de GitHub",
@@ -102,7 +108,7 @@
   },
   "stack": {
     "title": "Pile Technique",
-    "subtitle": "Les outils que j utilise pour livrer.",
+    "subtitle": "Les outils que j utilise pour livrer. Annees et frequence.",
     "languages": "Langages",
     "frameworks": "Frameworks",
     "tools": "Outils",
@@ -231,6 +237,60 @@
     "legal": "Mentions legales",
     "impressum": "Impressum",
     "datenschutz": "Datenschutz",
-    "lebenslauf": "Lebenslauf"
+    "lebenslauf": "Lebenslauf",
+    "blog": "Blog",
+    "observability": "Observabilite"
+  },
+  "anschreiben": {
+    "badge": "Studio",
+    "title": "Generateur d Anschreiben",
+    "subtitle": "Choisissez un employeur tech allemand cible et je redige une lettre de motivation personnalisee, en allemand ou en anglais, avec mon profil, mon statut Blue Card UE et ma pile alignee a la leur.",
+    "cardTitle": "Studio de Lettre",
+    "cardSubtitle": "Generez un Anschreiben adapte a chaque employeur cible.",
+    "openStudio": "Ouvrir le studio",
+    "targets": "Entreprises cibles",
+    "role": "Poste vise",
+    "language": "Langue",
+    "generate": "Generer l Anschreiben",
+    "generating": "Generation",
+    "copy": "Copier",
+    "copied": "Copie",
+    "careers": "Page carriere",
+    "pickAndGenerate": "Choisissez une entreprise et cliquez Generer. La lettre apparaitra ici.",
+    "disclosure": "Les brouillons generes sont des points de depart. Verifiez le contenu, signez et ajoutez votre adresse postale avant envoi."
+  },
+  "blog": {
+    "title": "Ecriture",
+    "subtitle": "Notes sur la construction de systemes interactifs, la vie en Allemagne et les compromis d ingenierie.",
+    "empty": "Pas encore de billets. Revenez bientot.",
+    "back": "Retour a tous les billets",
+    "minutes": "min de lecture"
+  },
+  "observability": {
+    "title": "Observabilite en direct",
+    "subtitle": "Cette page se mesure elle meme en temps reel. Latence Edge, requetes par seconde, taux de cache, taux d erreur et Lighthouse, interroge toutes les quatre secondes.",
+    "loading": "Connexion au endpoint des metriques",
+    "edge": "Runtime Edge",
+    "site": "Site",
+    "apis": "Endpoints API",
+    "lighthouse": "Lighthouse",
+    "p50": "p50",
+    "p95": "p95",
+    "p99": "p99",
+    "rps": "Requetes par seconde",
+    "cache": "Taux de cache",
+    "errorRate": "Taux d erreur",
+    "trend": "tendance",
+    "uptime": "Disponibilite",
+    "days": "jours",
+    "deployments": "Deploiements",
+    "commits24h": "Commits 24h",
+    "latestCommit": "Dernier commit",
+    "performance": "Perf",
+    "accessibility": "A11y",
+    "bestPractices": "Best",
+    "seo": "SEO",
+    "philosophyTitle": "Pourquoi un portfolio avec sa propre page de statut",
+    "philosophyBody": "Si je ne peux pas vous dire comment mon propre site performe, pourquoi me confier le votre. Ce tableau interroge un endpoint toutes les quatre secondes et affiche les chiffres. Le meme schema que pour un service en production."
   }
 }

@@ -1,8 +1,16 @@
-// Next.js configuration with security headers, image optimization, and next-intl plugin
-// Enables strict mode, configures remote image domains, and applies CSP friendly headers
+// Next.js configuration with security headers, image optimization, next-intl, and MDX
+// Enables strict mode, configures remote image domains, applies CSP friendly headers, and registers MDX page extensions
 const createNextIntlPlugin = require('next-intl/plugin');
+const createMDX = require('@next/mdx');
 
 const withNextIntl = createNextIntlPlugin('./i18n.ts');
+const withMDX = createMDX({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: []
+  }
+});
 
 const csp = [
   "default-src 'self'",
@@ -32,6 +40,7 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
+  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'avatars.githubusercontent.com' },
@@ -49,4 +58,4 @@ const nextConfig = {
   }
 };
 
-module.exports = withNextIntl(nextConfig);
+module.exports = withNextIntl(withMDX(nextConfig));

@@ -1,6 +1,6 @@
 {
   "name": "cembesli-portfolio",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "description": "Production-grade interactive portfolio for Cem Besli",
   "scripts": {
@@ -12,18 +12,27 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "0.32.1",
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@next/mdx": "^14.2.15",
     "@supabase/supabase-js": "^2.45.4",
     "@vercel/analytics": "^1.4.1",
     "@vercel/speed-insights": "^1.1.0",
     "clsx": "^2.1.1",
+    "gray-matter": "^4.0.3",
     "next": "14.2.15",
     "next-intl": "3.26.5",
+    "next-mdx-remote": "^5.0.0",
     "next-themes": "^0.3.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
+    "rehype-pretty-code": "^0.14.0",
+    "remark-gfm": "^4.0.0",
+    "shiki": "^1.22.0",
     "tailwind-merge": "^2.5.4"
   },
   "devDependencies": {
+    "@types/mdx": "^2.0.13",
     "@types/node": "20.16.11",
     "@types/react": "18.3.11",
     "@types/react-dom": "18.3.0",

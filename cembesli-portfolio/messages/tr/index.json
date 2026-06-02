@@ -20,7 +20,10 @@
     "menu": "Menu",
     "close": "Kapat",
     "skipToContent": "Ana icerige gec",
-    "commandPalette": "Komut paletini ac"
+    "commandPalette": "Komut paletini ac",
+    "blog": "Blog",
+    "anschreiben": "Anschreiben",
+    "observability": "Observability"
   },
   "hero": {
     "name": "Cem Besli",
@@ -32,7 +35,10 @@
     "viewProjects": "Projeleri Gor",
     "contact": "Iletisime Gec",
     "openCV": "CV yi Ac",
-    "bookCall": "Gorusme ayarla"
+    "bookCall": "Gorusme ayarla",
+    "available": "Su an musait",
+    "anschreiben": "Anschreiben olustur",
+    "lebenslauf": "Lebenslauf ac"
   },
   "github": {
     "title": "GitHub Canli Akisi",
@@ -102,7 +108,7 @@
   },
   "stack": {
     "title": "Teknik Yigin",
-    "subtitle": "Urun cikarmak icin uzandigim araclar.",
+    "subtitle": "Urun cikarmak icin uzandigim araclar. Yillar ve siklik.",
     "languages": "Diller",
     "frameworks": "Cerceveler",
     "tools": "Araclar",
@@ -231,6 +237,60 @@
     "legal": "Yasal",
     "impressum": "Impressum",
     "datenschutz": "Datenschutz",
-    "lebenslauf": "Lebenslauf"
+    "lebenslauf": "Lebenslauf",
+    "blog": "Blog",
+    "observability": "Observability"
+  },
+  "anschreiben": {
+    "badge": "Studio",
+    "title": "Anschreiben Olusturucu",
+    "subtitle": "Bir hedef Alman teknoloji isvereni secin, profilim, EU Blue Card durumum ve onlarinkine uyan stack ile Almanca veya Ingilizce kisisellestirilmis bir on yazi hazirlayim.",
+    "cardTitle": "On Yazi Studyosu",
+    "cardSubtitle": "Her hedef Alman isverene uyarlanmis bir Anschreiben olusturun.",
+    "openStudio": "Studyoyu ac",
+    "targets": "Hedef sirketler",
+    "role": "Basvurdugum rol",
+    "language": "Dil",
+    "generate": "Anschreiben olustur",
+    "generating": "Olusturuluyor",
+    "copy": "Kopyala",
+    "copied": "Kopyalandi",
+    "careers": "Kariyer sayfasi",
+    "pickAndGenerate": "Bir sirket secin ve Olustur a tiklayin. Mektup burada gorunecek.",
+    "disclosure": "Olusturulan taslaklar baslangic noktasidir. Iceriklerini inceleyin, kendiniz imzalayin ve adresinizi ekleyin."
+  },
+  "blog": {
+    "title": "Yazi",
+    "subtitle": "Etkilesimli sistemler kurma, Almanya da yasam ve muhendislik takaslari uzerine notlar.",
+    "empty": "Henuz yazi yok. Yakinda tekrar bakin.",
+    "back": "Tum yazilara don",
+    "minutes": "dk okuma"
+  },
+  "observability": {
+    "title": "Canli Gozlemlenebilirlik",
+    "subtitle": "Bu sayfa kendisini gercek zamanli olcer. Edge gecikme, saniye basina istek, cache isabet orani, hata orani ve Lighthouse, her dort saniyede bir ornekleme.",
+    "loading": "Metrik ucuna baglaniyor",
+    "edge": "Edge Runtime",
+    "site": "Site",
+    "apis": "API uclari",
+    "lighthouse": "Lighthouse",
+    "p50": "p50",
+    "p95": "p95",
+    "p99": "p99",
+    "rps": "Saniyede istek",
+    "cache": "Cache isabet orani",
+    "errorRate": "Hata orani",
+    "trend": "egilim",
+    "uptime": "Ayakta sure",
+    "days": "gun",
+    "deployments": "Dagitim",
+    "commits24h": "Son 24s commit",
+    "latestCommit": "Son commit",
+    "performance": "Perf",
+    "accessibility": "A11y",
+    "bestPractices": "Best",
+    "seo": "SEO",
+    "philosophyTitle": "Neden kendine ait bir durum sayfasi olan bir portfolyo",
+    "philosophyBody": "Kendi sitemin nasil performans gosterdigini gosteremiyorsam, sizin sitenizi neden bana emanet edesiniz. Bu pano dort saniyede bir metrik ucunu sorgular ve sonuclari inline gosterir."
   }
 }

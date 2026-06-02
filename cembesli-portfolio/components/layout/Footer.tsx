@@ -18,6 +18,16 @@ export function Footer() {
             </Link>
           </li>
           <li>
+            <Link href="/observability" className="hover:text-primary">
+              {t('observability')}
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog" className="hover:text-primary">
+              {t('blog')}
+            </Link>
+          </li>
+          <li>
             <Link href="/uses" className="hover:text-primary">
               {t('uses')}
             </Link>

@@ -1,0 +1,62 @@
+---
+title: "Warum man next-intl in 2026 pinnen sollte"
+description: "Eine kleine Geschichte ueber einen blanken Bildschirm in StackBlitz, ein zu liberales Caret in package.json und die Lektion dahinter."
+date: "2026-05-18"
+lang: "de"
+tags: ["next-intl", "internationalization", "dependencies", "lessons-learned"]
+---
+
+Beim Versuch, dieses Portfolio in einer Vorschau Umgebung zu zeigen, sah ich eine ueberraschende leere Seite. Lokal lief alles. In der CI lief alles. Aber StackBlitz zeigte mir nur den next-intl Fehler, dass `headers` ausserhalb einer Request Scope aufgerufen wurde.
+
+Die Ursache war einfach und peinlich.
+
+## Das Problem
+
+In meiner `package.json` stand `"next-intl": "^3.20.0"`. Das Caret erlaubt jede Version unter dem naechsten Major Release. Lokal hatte ich `3.26.5`, weil das die Version war, die `npm install` zu Beginn aufgeloest hat. StackBlitz hat das Repository frisch geklont und npm hat eine spaetere Version aufgeloest, die in einer entscheidenden Stelle anders funktioniert.
+
+Zwischen `3.20` und `3.27` haben sich diese Dinge geaendert:
+
+1. `requestLocale` ist der neue Vertrag fuer `getRequestConfig`. Der alte `locale` Parameter ist deprecated und gibt Warnungen aus.
+2. Das exportierte `unstable_setRequestLocale` wurde stabilisiert zu `setRequestLocale`.
+3. Das Verhalten von `requestLocale` ist strenger, wenn keine Middleware vorgeschaltete Header gesetzt hat.
+
+## Die Lektion
+
+Pakete, die zur Laufzeit deinen Rendering Pfad bestimmen, sollten gepinnt sein. Nicht jede Drittabhaengigkeit braucht das. Aber alles, was Routing, i18n oder Server Rendering beeinflusst, ist Risiko.
+
+Mein Fix war winzig.
+
+```json
+{
+  "dependencies": {
+    "next-intl": "3.26.5"
+  }
+}
+```
+
+Plus eine defensive `i18n.ts`, die den `requestLocale` Aufruf in einem try catch wrappt und auf den Default Locale zurueckfaellt, falls die Middleware nicht aktiv ist.
+
+```ts
+export default getRequestConfig(async ({ requestLocale }) => {
+  let candidate: string | undefined;
+  try {
+    candidate = await requestLocale;
+  } catch {
+    candidate = undefined;
+  }
+  const locale = isLocale(candidate) ? candidate : defaultLocale;
+  return {
+    locale,
+    messages: (await import(`./messages/${locale}/index.json`)).default,
+    timeZone: 'Europe/Berlin'
+  };
+});
+```
+
+## Die kleinere Lektion
+
+Wenn StackBlitz, Vercel Preview oder ein Codespace nicht das zeigt, was lokal funktioniert, ist die Antwort fast immer dieselbe. Vergleiche `package-lock.json` zwischen den Umgebungen. Pin alles, was schmerzhaft zu debuggen waere.
+
+## Was ich daraus mitnehme
+
+Caret Ranges sind bequem. Pin Versions sind ehrlich. Fuer alles, was meine Render Pipeline beruehrt, nehme ich ab jetzt die Ehrlichkeit.

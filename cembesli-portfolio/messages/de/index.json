@@ -20,7 +20,10 @@
     "menu": "Menue",
     "close": "Schliessen",
     "skipToContent": "Zum Hauptinhalt springen",
-    "commandPalette": "Befehlspalette oeffnen"
+    "commandPalette": "Befehlspalette oeffnen",
+    "blog": "Blog",
+    "anschreiben": "Anschreiben",
+    "observability": "Observability"
   },
   "hero": {
     "name": "Cem Besli",
@@ -32,7 +35,10 @@
     "viewProjects": "Projekte ansehen",
     "contact": "Kontakt aufnehmen",
     "openCV": "Lebenslauf oeffnen",
-    "bookCall": "Termin buchen"
+    "bookCall": "Termin buchen",
+    "available": "Aktuell verfuegbar",
+    "anschreiben": "Anschreiben erzeugen",
+    "lebenslauf": "Lebenslauf oeffnen"
   },
   "github": {
     "title": "Live von GitHub",
@@ -102,7 +108,7 @@
   },
   "stack": {
     "title": "Tech Stack",
-    "subtitle": "Werkzeuge mit denen ich liefere.",
+    "subtitle": "Werkzeuge mit denen ich liefere. Jahre und Frequenz.",
     "languages": "Sprachen",
     "frameworks": "Frameworks",
     "tools": "Werkzeuge",
@@ -231,6 +237,60 @@
     "legal": "Rechtliches",
     "impressum": "Impressum",
     "datenschutz": "Datenschutz",
-    "lebenslauf": "Lebenslauf"
+    "lebenslauf": "Lebenslauf",
+    "blog": "Blog",
+    "observability": "Observability"
+  },
+  "anschreiben": {
+    "badge": "Studio",
+    "title": "Anschreiben Generator",
+    "subtitle": "Klicken Sie auf ein Ziel Unternehmen und ich entwerfe ein personalisiertes Anschreiben in Deutsch oder Englisch, mit meinem Profil, EU Blue Card Status und passendem Stack.",
+    "cardTitle": "Anschreiben Studio",
+    "cardSubtitle": "Erzeugen Sie ein Anschreiben passend zu jedem Ziel Unternehmen.",
+    "openStudio": "Studio oeffnen",
+    "targets": "Zielunternehmen",
+    "role": "Angestrebte Rolle",
+    "language": "Sprache",
+    "generate": "Anschreiben erzeugen",
+    "generating": "Erzeuge",
+    "copy": "Kopieren",
+    "copied": "Kopiert",
+    "careers": "Karriereseite",
+    "pickAndGenerate": "Waehlen Sie ein Unternehmen und klicken Sie Erzeugen. Das Anschreiben erscheint hier.",
+    "disclosure": "Erzeugte Entwuerfe sind Ausgangspunkte. Pruefen Sie inhaltlich, signieren Sie selbst und ergaenzen Sie die Postanschrift vor dem Versand."
+  },
+  "blog": {
+    "title": "Schreiben",
+    "subtitle": "Notizen zum Bau interaktiver Systeme, zum Leben in Deutschland und zu Engineering Kompromissen.",
+    "empty": "Noch keine Beitraege. Bald wieder reinschauen.",
+    "back": "Zurueck zu allen Beitraegen",
+    "minutes": "Min Lesezeit"
+  },
+  "observability": {
+    "title": "Live Observability",
+    "subtitle": "Diese Seite misst sich selbst in Echtzeit. Edge Latenz, Requests pro Sekunde, Cache Trefferquote, Fehlerrate und Lighthouse, alle vier Sekunden abgefragt.",
+    "loading": "Verbinde mit Metrik Endpoint",
+    "edge": "Edge Runtime",
+    "site": "Seite",
+    "apis": "API Endpunkte",
+    "lighthouse": "Lighthouse",
+    "p50": "p50",
+    "p95": "p95",
+    "p99": "p99",
+    "rps": "Anfragen pro Sekunde",
+    "cache": "Cache Trefferquote",
+    "errorRate": "Fehlerrate",
+    "trend": "Verlauf",
+    "uptime": "Verfuegbarkeit",
+    "days": "Tage",
+    "deployments": "Deployments",
+    "commits24h": "Commits letzte 24h",
+    "latestCommit": "Letzter Commit",
+    "performance": "Perf",
+    "accessibility": "A11y",
+    "bestPractices": "Best",
+    "seo": "SEO",
+    "philosophyTitle": "Warum ein Portfolio mit eigener Status Seite",
+    "philosophyBody": "Wenn ich Ihnen nicht zeigen kann wie meine eigene Seite gerade performt, warum sollten Sie mir Ihre anvertrauen. Dieses Dashboard fragt alle vier Sekunden einen Metrik Endpoint ab und zeigt die Werte inline. Dieselbe Methode die ich auch in Produktion einsetzen wuerde."
   }
 }
