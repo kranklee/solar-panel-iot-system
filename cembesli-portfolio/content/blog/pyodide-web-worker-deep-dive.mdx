@@ -1,0 +1,45 @@
+---
+title: "Running Python in a Web Worker with Pyodide"
+description: "How to keep the main thread snappy while real CPython runs in the browser, and the three traps I hit."
+date: "2026-05-12"
+lang: "en"
+tags: ["pyodide", "web-workers", "performance", "wasm"]
+---
+
+I wanted the portfolio you are reading to have a working Python terminal. Not a fake one. A real one where you type code, hit run, and a CPython interpreter executes it. Pyodide does exactly that. It compiles CPython to WebAssembly so the browser can run real Python.
+
+But the naive integration blocks the main thread. Loading the runtime alone moves around fifteen megabytes of WASM. If that happens on the UI thread, the page freezes for several seconds and Lighthouse hates you.
+
+## The fix in one sentence
+
+Run Pyodide inside a Web Worker. The Worker has its own thread, its own JavaScript runtime, and its own message queue. The UI thread only sees post and receive.
+
+```ts
+const worker = new Worker(URL.createObjectURL(new Blob([WORKER_SOURCE], {
+  type: 'application/javascript'
+})));
+
+worker.onmessage = (event) => {
+  if (event.data.type === 'stdout') appendToTerminal(event.data.data);
+};
+
+worker.postMessage({ type: 'run', code: 'print(2 ** 10)' });
+```
+
+## Trap one: importScripts inside a module Worker
+
+You cannot use `importScripts` from a module Worker. Pyodide's CDN script needs the classic Worker mode, which means you cannot do `new Worker(url, { type: 'module' })`. Use the default classic form.
+
+## Trap two: stdout buffering
+
+Pyodide's `setStdout({ batched: ... })` callback fires once per flush, not once per character. If you call print thirty times in a loop, you get one message back, not thirty. That is what you want for performance. But if your tests assume per call delivery, they will fail.
+
+## Trap three: the Content Security Policy
+
+Pyodide loads from a CDN. Your CSP must allow `cdn.jsdelivr.net` under `script-src` and `connect-src`, and `blob:` under `worker-src`. Forget the worker-src directive and Firefox refuses to spawn the worker without a useful console message.
+
+## What I would do next
+
+A nice next step is shipping a small in browser package manager so visitors can `import numpy as np` without the seven megabyte cold start. Pyodide supports loading packages on demand. The trade off is a second of latency the first time someone imports.
+
+Until then, the demo on the homepage executes whatever Python you paste, in a real worker, with real stdout. Click run and try it.
