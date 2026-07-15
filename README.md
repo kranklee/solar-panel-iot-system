@@ -48,9 +48,9 @@ solar-panel-iot-system/
 ## ⚙ Features
 
 ### Data Generator
-- Models a full solar day cycle using `math.sin` — output rises at sunrise, peaks at noon, drops at sunset
-- Cyclical and unlimited — never runs out of readings
-- Weather simulation: **Clear, Partly Cloudy, Overcast, Foggy** — each affects power output with realistic multipliers
+- Models a full solar day cycle using `math.sin` output rises at sunrise, peaks at noon, drops at sunset
+- Cyclical and unlimited never runs out of readings
+- Weather simulation: **Clear, Partly Cloudy, Overcast, Foggy**  each affects power output with realistic multipliers
 - Gaussian noise for realistic sensor variance
 
 ### Publisher
